@@ -1,9 +1,11 @@
-https://itzdd9527.github.io/archives/index.html
-https://itzdd9527.github.io/tags/index.html
 https://itzdd9527.github.io/2025/06/01/hexo-next-setup/
 https://itzdd9527.github.io/about/index.html
+https://itzdd9527.github.io/archives/index.html
+https://itzdd9527.github.io/categories/index.html
+https://itzdd9527.github.io/tags/index.html
 https://itzdd9527.github.io/
 https://itzdd9527.github.io/tags/Hexo/
 https://itzdd9527.github.io/tags/NexT/
 https://itzdd9527.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/
+https://itzdd9527.github.io/tags/%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/
 https://itzdd9527.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
