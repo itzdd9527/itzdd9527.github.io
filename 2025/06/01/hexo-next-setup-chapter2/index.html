@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"itzdd9527.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="🎭 第二章：博客配置 - 为面具注入灵魂 “每一个面具背后都有一个故事，每一个配置背后都有一个灵魂” - 现在是时候为您的数字面具注入独特的个性了。  在第一章中，我们搭建了博客的基础架构。现在，让我们为这个舞台添加戏剧性的元素，让”V’s Joker”的个性在每一个配置中闪闪发光。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始搭建 Hexo + NexT 个人博客（第二章：博客配置）">
+<meta property="og:url" content="https://itzdd9527.github.io/2025/06/01/hexo-next-setup-chapter2/index.html">
+<meta property="og:site_name" content="V&#39;s Joker">
+<meta property="og:description" content="🎭 第二章：博客配置 - 为面具注入灵魂 “每一个面具背后都有一个故事，每一个配置背后都有一个灵魂” - 现在是时候为您的数字面具注入独特的个性了。  在第一章中，我们搭建了博客的基础架构。现在，让我们为这个舞台添加戏剧性的元素，让”V’s Joker”的个性在每一个配置中闪闪发光。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-01T13:15:00.000Z">
+<meta property="article:modified_time" content="2025-06-04T08:57:09.187Z">
+<meta property="article:author" content="V.Joker">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="NexT">
+<meta property="article:tag" content="V&#39;s Joker">
+<meta property="article:tag" content="博客配置">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://itzdd9527.github.io/2025/06/01/hexo-next-setup-chapter2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://itzdd9527.github.io/2025/06/01/hexo-next-setup-chapter2/","path":"2025/06/01/hexo-next-setup-chapter2/","title":"从零开始搭建 Hexo + NexT 个人博客（第二章：博客配置）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>从零开始搭建 Hexo + NexT 个人博客（第二章：博客配置） | V's Joker</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="V's Joker" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">V's Joker</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember remember the chaos and smile</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%8E%AD-%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE-%E4%B8%BA%E9%9D%A2%E5%85%B7%E6%B3%A8%E5%85%A5%E7%81%B5%E9%AD%82"><span class="nav-number">1.</span> <span class="nav-text">🎭 第二章：博客配置 - 为面具注入灵魂</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%9B%EF%B8%8F-%E7%AB%99%E7%82%B9%E4%BF%A1%E6%81%AF%E9%85%8D%E7%BD%AE-%E8%88%9E%E5%8F%B0%E7%9A%84%E8%BA%AB%E4%BB%BD%E8%AF%81"><span class="nav-number">1.1.</span> <span class="nav-text">🏛️ 站点信息配置 - 舞台的身份证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BC%96%E8%BE%91%E4%B8%BB%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-config-yml"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 编辑主配置文件 _config.yml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%A8-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE-%E4%B8%BA%E9%9D%A2%E5%85%B7%E6%B7%BB%E5%8A%A0%E8%89%B2%E5%BD%A9"><span class="nav-number">1.2.</span> <span class="nav-text">🎨 主题配置 - 为面具添加色彩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BC%96%E8%BE%91%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-config-next-yml"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 编辑主题配置文件 _config.next.yml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2-%E6%90%AD%E5%BB%BA%E8%88%9E%E5%8F%B0%E7%9A%84%E5%90%84%E4%B8%AA%E8%A7%92%E8%90%BD"><span class="nav-number">1.3.</span> <span class="nav-text">📝 创建页面 - 搭建舞台的各个角落</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 创建关于页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E8%81%94%E7%B3%BB%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 创建联系页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BA%E8%AE%A2%E9%98%85%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. 创建订阅页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%B7%EF%B8%8F-%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.4.</span> <span class="nav-text">🏷️ 创建分类和标签页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 创建分类页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 创建标签页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%A8-%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6"><span class="nav-number">1.5.</span> <span class="nav-text">🎨 个性化定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E8%84%9A"><span class="nav-number">1.5.1.</span> <span class="nav-text">1. 自定义页脚</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.5.2.</span> <span class="nav-text">2. 自定义样式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%80-%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE"><span class="nav-number">1.6.</span> <span class="nav-text">🚀 测试配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%B8%85%E7%90%86%E5%B9%B6%E9%87%8D%E6%96%B0%E7%94%9F%E6%88%90"><span class="nav-number">1.6.1.</span> <span class="nav-text">1. 清理并重新生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%90%AF%E5%8A%A8%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.6.2.</span> <span class="nav-text">2. 启动本地服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%A3%80%E6%9F%A5%E9%85%8D%E7%BD%AE%E6%95%88%E6%9E%9C"><span class="nav-number">1.6.3.</span> <span class="nav-text">3. 检查配置效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AD-%E5%B0%8F%E7%BB%93%EF%BC%9A%E9%9D%A2%E5%85%B7%E5%B7%B2%E6%9C%89%E7%81%B5%E9%AD%82"><span class="nav-number">1.7.</span> <span class="nav-text">🎭 小结：面具已有灵魂</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="V.Joker"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">V.Joker</p>
+  <div class="site-description" itemprop="description">在混沌中寻找真相，在黑暗里绽放微笑</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/itzdd9527" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;itzdd9527" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://itzdd9527.github.io/2025/06/01/hexo-next-setup-chapter2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="从零开始搭建 Hexo + NexT 个人博客（第二章：博客配置） | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从零开始搭建 Hexo + NexT 个人博客（第二章：博客配置）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-01 21:15:00" itemprop="dateCreated datePublished" datetime="2025-06-01T21:15:00+08:00">2025-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-04 16:57:09" itemprop="dateModified" datetime="2025-06-04T16:57:09+08:00">2025-06-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/chaos-theory/" itemprop="url" rel="index"><span itemprop="name">混沌理论</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="🎭-第二章：博客配置-为面具注入灵魂"><a href="#🎭-第二章：博客配置-为面具注入灵魂" class="headerlink" title="🎭 第二章：博客配置 - 为面具注入灵魂"></a>🎭 第二章：博客配置 - 为面具注入灵魂</h1><blockquote>
+<p>“每一个面具背后都有一个故事，每一个配置背后都有一个灵魂” - 现在是时候为您的数字面具注入独特的个性了。</p>
+</blockquote>
+<p>在第一章中，我们搭建了博客的基础架构。现在，让我们为这个舞台添加戏剧性的元素，让”V’s Joker”的个性在每一个配置中闪闪发光。</p>
+<span id="more"></span>
+
+<h2 id="🏛️-站点信息配置-舞台的身份证"><a href="#🏛️-站点信息配置-舞台的身份证" class="headerlink" title="🏛️ 站点信息配置 - 舞台的身份证"></a>🏛️ 站点信息配置 - 舞台的身份证</h2><h3 id="1-编辑主配置文件-config-yml"><a href="#1-编辑主配置文件-config-yml" class="headerlink" title="1. 编辑主配置文件 _config.yml"></a>1. 编辑主配置文件 <code>_config.yml</code></h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 网站基本信息 - V&#x27;s Joker 的身份</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&quot;V&#x27;s Joker&quot;</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;Remember remember the chaos and smile&#x27;</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;在混沌中寻找真相，在黑暗里绽放微笑&#x27;</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">V&#x27;s</span> <span class="string">Joker</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">小丑</span> <span class="string">(Joker)</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Code</span> <span class="string">Space</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">混沌理论</span> <span class="string">(Chaos</span> <span class="string">Theory)</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">戏剧沉思</span> <span class="string">(Theatrical</span> <span class="string">Musings)</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">蒙面真相</span> <span class="string">(Masked</span> <span class="string">Truths)</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">V.Joker</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL 配置</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://你的域名.com</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">trailing_html:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 目录结构</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 写作配置</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">external_link:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">site</span></span><br><span class="line">  <span class="attr">exclude:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分页设置</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">page</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分类映射（中英文对照）</span></span><br><span class="line"><span class="attr">category_map:</span></span><br><span class="line">  <span class="string">混沌理论:</span> <span class="string">chaos-theory</span></span><br><span class="line">  <span class="string">戏剧沉思:</span> <span class="string">theatrical-musings</span></span><br><span class="line">  <span class="string">蒙面真相:</span> <span class="string">masked-truths</span></span><br><span class="line">  <span class="string">博客搭建:</span> <span class="string">blog-setup</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 主题设置</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="🎨-主题配置-为面具添加色彩"><a href="#🎨-主题配置-为面具添加色彩" class="headerlink" title="🎨 主题配置 - 为面具添加色彩"></a>🎨 主题配置 - 为面具添加色彩</h2><h3 id="1-编辑主题配置文件-config-next-yml"><a href="#1-编辑主题配置文件-config-next-yml" class="headerlink" title="1. 编辑主题配置文件 _config.next.yml"></a>1. 编辑主题配置文件 <code>_config.next.yml</code></h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 主题风格选择（Gemini 最适合戏剧性展示）</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 网站图标配置</span></span><br><span class="line"><span class="attr">favicon:</span></span><br><span class="line">  <span class="attr">small:</span> <span class="string">/images/favicon-16x16.png</span></span><br><span class="line">  <span class="attr">medium:</span> <span class="string">/images/favicon-32x32.png</span></span><br><span class="line">  <span class="attr">apple_touch_icon:</span> <span class="string">/images/apple-touch-icon.png</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 菜单配置 - 舞台的导航</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">contact:</span> <span class="string">/contact/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br><span class="line">  <span class="attr">subscribe:</span> <span class="string">/subscribe/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-rss</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 菜单设置</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 侧边栏配置</span></span><br><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">left</span></span><br><span class="line">  <span class="attr">display:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">padding:</span> <span class="number">18</span></span><br><span class="line">  <span class="attr">offset:</span> <span class="number">12</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 头像设置 - V&#x27;s Joker 的面具</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/avatar.png</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 站点状态</span></span><br><span class="line"><span class="attr">site_state:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 社交链接 - 连接混沌网络</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/你的用户名</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">E-Mail:</span> <span class="string">mailto:你的邮箱</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br><span class="line">  <span class="attr">RSS:</span> <span class="string">/atom.xml</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-rss</span></span><br><span class="line"></span><br><span class="line"><span class="attr">social_icons:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">icons_only:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">transition:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 友情链接</span></span><br><span class="line"><span class="attr">links_settings:</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">fa</span> <span class="string">fa-globe</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">混沌联盟</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="string">block</span></span><br><span class="line"></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line">  <span class="string">混沌理论研究所:</span> <span class="string">https://example1.com</span></span><br><span class="line">  <span class="string">戏剧哲学社:</span> <span class="string">https://example2.com</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 目录设置</span></span><br><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">expand_all:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">max_depth:</span> <span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代码块配置</span></span><br><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="attr">theme:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">default</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">stackoverflow-dark</span></span><br><span class="line">  <span class="attr">prism:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">prism</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">prism-dark</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">show_result:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">style:</span> <span class="string">flat</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回顶部</span></span><br><span class="line"><span class="attr">back2top:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 阅读进度</span></span><br><span class="line"><span class="attr">reading_progress:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">top</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">&quot;#37c6c0&quot;</span></span><br><span class="line">  <span class="attr">height:</span> <span class="string">3px</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 书签功能</span></span><br><span class="line"><span class="attr">bookmark:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">&quot;#222&quot;</span></span><br><span class="line">  <span class="attr">save:</span> <span class="string">auto</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># GitHub Banner</span></span><br><span class="line"><span class="attr">github_banner:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">permalink:</span> <span class="string">https://github.com/你的用户名</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">在</span> <span class="string">GitHub</span> <span class="string">上关注我</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="📝-创建页面-搭建舞台的各个角落"><a href="#📝-创建页面-搭建舞台的各个角落" class="headerlink" title="📝 创建页面 - 搭建舞台的各个角落"></a>📝 创建页面 - 搭建舞台的各个角落</h2><h3 id="1-创建关于页面"><a href="#1-创建关于页面" class="headerlink" title="1. 创建关于页面"></a>1. 创建关于页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>source/about/index.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 关于 V&#x27;s Joker</span><br><span class="line">date: 2025-06-01</span><br><span class="line"><span class="section">type: about</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 🎭 关于 V&#x27;s Joker</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; &quot;我们都戴着面具，但有些人选择微笑&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 🃏 小丑的自白</span></span><br><span class="line"></span><br><span class="line">欢迎来到混沌与秩序交织的数字舞台。我是 V.Joker，一个在代码世界中寻找真相的数字小丑。</span><br><span class="line"></span><br><span class="line">在这里，你会发现：</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**混沌理论**</span>：技术探索与代码哲学</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**戏剧沉思**</span>：对生活、技术、社会的深度思考</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**蒙面真相**</span>：揭示表象背后的本质</span><br><span class="line"></span><br><span class="line"><span class="section">## 🎪 舞台规则</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> <span class="strong">**保持好奇心**</span> - 质疑一切，包括这些规则</span><br><span class="line"><span class="bullet">2.</span> <span class="strong">**拥抱混沌**</span> - 在不确定中寻找机会</span><br><span class="line"><span class="bullet">3.</span> <span class="strong">**微笑面对**</span> - 即使在最黑暗的代码bug中</span><br><span class="line"><span class="bullet">4.</span> <span class="strong">**记住记住**</span> - 每一次失败都是下一次成功的伏笔</span><br><span class="line"></span><br><span class="line"><span class="section">## 📬 联系小丑</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**GitHub**</span>: [<span class="string">你的GitHub</span>](<span class="link">https://github.com/你的用户名</span>)</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Email**</span>: vjoker@chaos.com</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**微笑频率**</span>: 24/7</span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; &quot;记住，记住，混沌与微笑&quot; - V.Joker</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-创建联系页面"><a href="#2-创建联系页面" class="headerlink" title="2. 创建联系页面"></a>2. 创建联系页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page contact</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>source/contact/index.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 联系我们</span><br><span class="line">date: 2025-06-01</span><br><span class="line"><span class="section">type: contact</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 📬 联系 V&#x27;s Joker</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; &quot;在混沌中建立连接，在黑暗中传递微笑&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 🎭 加入假面舞会</span></span><br><span class="line"></span><br><span class="line">如果你想与小丑对话，或者想要揭开某个面具背后的真相，请通过以下方式联系：</span><br><span class="line"></span><br><span class="line"><span class="section">### 📧 数字信鸽</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**邮箱**</span>: vjoker@chaos.com</span><br><span class="line"></span><br><span class="line"><span class="section">### 🐙 代码章鱼</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**GitHub**</span>: [<span class="string">你的GitHub主页</span>](<span class="link">https://github.com/你的用户名</span>)</span><br><span class="line"></span><br><span class="line"><span class="section">### 🎪 社交舞台</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**微博**</span>: @VJoker混沌小丑</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**知乎**</span>: V的小丑面具</span><br><span class="line"></span><br><span class="line"><span class="section">## 🔍 谜语验证</span></span><br><span class="line"></span><br><span class="line">在发送邮件前，请回答这个小丑的谜语：</span><br><span class="line"></span><br><span class="line"><span class="strong">**&quot;什么东西越分享越多，越保守越少？&quot;**</span></span><br><span class="line"></span><br><span class="line"><span class="emphasis">*提示：它存在于每一行代码中，每一次思考里*</span></span><br><span class="line"></span><br><span class="line">答案请在邮件标题中注明，这样小丑就知道你是真正的思考者。</span><br><span class="line"></span><br><span class="line"><span class="section">## 📝 联系模板</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>主题：[谜语答案] - 你的主题<br>内容：</p>
+<ul>
+<li>你的问题或想法</li>
+<li>你希望讨论的话题</li>
+<li>你对混沌理论的理解（可选）</li>
+</ul>
+<p>签名：你的数字面具名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt; &quot;每一次交流都是一场假面舞会，让我们在对话中相遇&quot; - V.Joker</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-创建订阅页面"><a href="#3-创建订阅页面" class="headerlink" title="3. 创建订阅页面"></a>3. 创建订阅页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page subscribe</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>source/subscribe/index.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 订阅更新</span><br><span class="line">date: 2025-06-01</span><br><span class="line"><span class="section">type: subscribe</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 🎪 加入假面舞会</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; &quot;订阅混沌，拥抱不确定性&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 📡 混沌信号</span></span><br><span class="line"></span><br><span class="line">想要第一时间收到小丑的最新表演通知吗？加入我们的假面舞会，让混沌理论直达你的收件箱。</span><br><span class="line"></span><br><span class="line"><span class="section">### 🎭 订阅内容</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**技术洞察**</span>：最新的代码哲学和技术探索</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**混沌理论**</span>：深度技术文章和思考</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**戏剧沉思**</span>：对技术、生活、社会的独特见解</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**蒙面真相**</span>：揭示行业内幕和技术本质</span><br><span class="line"></span><br><span class="line"><span class="section">### 📬 订阅方式</span></span><br><span class="line"></span><br><span class="line"><span class="section">#### RSS 订阅（推荐）</span></span><br></pre></td></tr></table></figure>
+<p>https:&#x2F;&#x2F;你的域名.com&#x2F;atom.xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 邮件订阅</span><br><span class="line">发送邮件至 `subscribe@chaos.com`，主题写明&quot;加入假面舞会&quot;</span><br><span class="line"></span><br><span class="line">#### 社交媒体关注</span><br><span class="line">- GitHub: [关注获取代码更新](https://github.com/你的用户名)</span><br><span class="line">- 微博: @VJoker混沌小丑</span><br><span class="line"></span><br><span class="line">## 🎪 舞会规则</span><br><span class="line"></span><br><span class="line">1. **保持开放心态** - 准备好接受不同的观点</span><br><span class="line">2. **积极参与讨论** - 在评论区留下你的思考</span><br><span class="line">3. **分享你的见解** - 混沌需要更多的声音</span><br><span class="line">4. **享受这个过程** - 学习应该是快乐的</span><br><span class="line"></span><br><span class="line">## 🃏 小丑的承诺</span><br><span class="line"></span><br><span class="line">- **质量保证**：每篇文章都经过深度思考</span><br><span class="line">- **定期更新**：每周至少一次混沌注入</span><br><span class="line">- **互动回复**：认真回复每一个有价值的评论</span><br><span class="line">- **持续改进**：根据反馈不断优化内容</span><br><span class="line"></span><br><span class="line">&gt; &quot;在信息的海洋中，让我们成为彼此的灯塔&quot; - V.Joker</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">**立即行动**：选择一种订阅方式，开始你的混沌之旅！</span><br></pre></td></tr></table></figure>
+
+<h2 id="🏷️-创建分类和标签页面"><a href="#🏷️-创建分类和标签页面" class="headerlink" title="🏷️ 创建分类和标签页面"></a>🏷️ 创建分类和标签页面</h2><h3 id="1-创建分类页面"><a href="#1-创建分类页面" class="headerlink" title="1. 创建分类页面"></a>1. 创建分类页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>source/categories/index.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2025-06-01</span><br><span class="line"><span class="section">type: categories</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 🎭 混沌分类学</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; &quot;在混沌中寻找秩序，在分类中发现联系&quot;</span></span><br><span class="line"></span><br><span class="line">欢迎来到 V&#x27;s Joker 的知识分类系统。每个分类都代表着小丑面具下的一个思考维度。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-创建标签页面"><a href="#2-创建标签页面" class="headerlink" title="2. 创建标签页面"></a>2. 创建标签页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>source/tags/index.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标签</span><br><span class="line">date: 2025-06-01</span><br><span class="line"><span class="section">type: tags</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 🏷️ 混沌标签云</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; &quot;标签是思想的指纹，每一个都独一无二&quot;</span></span><br><span class="line"></span><br><span class="line">在这个标签云中，你可以找到连接不同思想的线索。</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎨-个性化定制"><a href="#🎨-个性化定制" class="headerlink" title="🎨 个性化定制"></a>🎨 个性化定制</h2><h3 id="1-自定义页脚"><a href="#1-自定义页脚" class="headerlink" title="1. 自定义页脚"></a>1. 自定义页脚</h3><p>创建 <code>source/_data/footer.njk</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;custom-footer&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&quot;微笑是混乱的最佳面具&quot; - V.Joker<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>在混沌中寻找真相，在黑暗里绽放微笑<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-自定义样式"><a href="#2-自定义样式" class="headerlink" title="2. 自定义样式"></a>2. 自定义样式</h3><p>创建 <code>source/_data/styles.styl</code>：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// V&#x27;s Joker 主题色彩</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--joker-purple</span>: <span class="number">#6f42c1</span>;</span><br><span class="line">  <span class="attr">--joker-green</span>: <span class="number">#28a745</span>;</span><br><span class="line">  <span class="attr">--chaos-dark</span>: <span class="number">#1a1a1a</span>;</span><br><span class="line">  <span class="attr">--smile-yellow</span>: <span class="number">#ffc107</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义引用样式</span></span><br><span class="line"><span class="selector-tag">blockquote</span> &#123;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">4px</span> solid <span class="built_in">var</span>(--joker-purple);</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">90deg</span>, <span class="built_in">rgba</span>(<span class="number">111</span>, <span class="number">66</span>, <span class="number">193</span>, <span class="number">0.1</span>) <span class="number">0%</span>, transparent <span class="number">100%</span>);</span><br><span class="line">  <span class="attribute">font-style</span>: italic;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-pseudo">&amp;::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;🎭&quot;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.2em</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代码块样式增强</span></span><br><span class="line"><span class="selector-class">.highlight</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">8px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🚀-测试配置"><a href="#🚀-测试配置" class="headerlink" title="🚀 测试配置"></a>🚀 测试配置</h2><h3 id="1-清理并重新生成"><a href="#1-清理并重新生成" class="headerlink" title="1. 清理并重新生成"></a>1. 清理并重新生成</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-启动本地服务器"><a href="#2-启动本地服务器" class="headerlink" title="2. 启动本地服务器"></a>2. 启动本地服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-检查配置效果"><a href="#3-检查配置效果" class="headerlink" title="3. 检查配置效果"></a>3. 检查配置效果</h3><p>访问 <code>http://localhost:4000</code> 检查：</p>
+<ul>
+<li>站点标题和描述是否正确显示</li>
+<li>菜单导航是否正常工作</li>
+<li>各个页面是否能正常访问</li>
+<li>社交链接是否正确</li>
+</ul>
+<h2 id="🎭-小结：面具已有灵魂"><a href="#🎭-小结：面具已有灵魂" class="headerlink" title="🎭 小结：面具已有灵魂"></a>🎭 小结：面具已有灵魂</h2><p>恭喜！您已经为博客注入了”V’s Joker”的灵魂。现在您的博客拥有了：</p>
+<ul>
+<li>✅ 完整的站点信息配置</li>
+<li>✅ 个性化的主题设置</li>
+<li>✅ 功能完整的导航菜单</li>
+<li>✅ 关于、联系、订阅等页面</li>
+<li>✅ 分类和标签系统</li>
+<li>✅ 自定义样式和元素</li>
+</ul>
+<p>在下一章《配置进阶》中，我们将：</p>
+<ul>
+<li>配置评论系统，让访客参与假面舞会</li>
+<li>设置搜索功能，帮助在混沌中寻找真相</li>
+<li>添加统计分析，了解舞台的观众</li>
+<li>优化SEO，让更多人发现这个舞台</li>
+</ul>
+<blockquote>
+<p>“配置不仅是技术，更是艺术。每一个设置都在诉说着创作者的故事” - V.Joker</p>
+</blockquote>
+<hr>
+<p><strong>下一章预告</strong>：《第三章：配置进阶 - 让舞台更加精彩》</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/NexT/" rel="tag"># NexT</a>
+              <a href="/tags/V-s-Joker/" rel="tag"># V's Joker</a>
+              <a href="/tags/%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/" rel="tag"># 博客配置</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/06/01/hexo-next-setup-chapter1/" rel="prev" title="从零开始搭建 Hexo + NexT 个人博客（第一章：博客搭建）">
+                  <i class="fa fa-angle-left"></i> 从零开始搭建 Hexo + NexT 个人博客（第一章：博客搭建）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/06/01/hexo-next-setup-chapter3/" rel="next" title="从零开始搭建 Hexo + NexT 个人博客（第三章：配置进阶）">
+                  从零开始搭建 Hexo + NexT 个人博客（第三章：配置进阶） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">V.Joker</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><footer class="custom-footer">
+  <p>“微笑是混乱的最佳面具。”</p>
+  <p>&copy; 2025 V's Joker | <a href="/contact/">联系我</a></p>
+</footer>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
