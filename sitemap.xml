@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itzdd9527.github.io/subscribe/index.html</loc>
+    
+    <lastmod>2025-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itzdd9527.github.io/tags/index.html</loc>
+    
+    <lastmod>2025-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itzdd9527.github.io/2025/06/01/hexo-next-setup/</loc>
+    
+    <lastmod>2025-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itzdd9527.github.io/2025/06/01/hexo-next-setup.old/</loc>
     
     <lastmod>2025-06-04</lastmod>
     
@@ -38,7 +65,16 @@
   </url>
   
   <url>
-    <loc>https://itzdd9527.github.io/tags/index.html</loc>
+    <loc>https://itzdd9527.github.io/contact/index.html</loc>
+    
+    <lastmod>2025-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itzdd9527.github.io/404.html</loc>
     
     <lastmod>2025-06-04</lastmod>
     
