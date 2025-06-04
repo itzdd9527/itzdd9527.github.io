@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"itzdd9527.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="从零开始搭建 Hexo + NexT 个人博客（2025 最新）本系列将带你打造一款兼具“V 字面具”与“小丑”元素的个人博客，分为四大章节： 第一章 博客搭建 环境准备：安装 Node.js、Git 以及 VS Code。 安装 Hexo：npm install -g hexo-cli 并初始化项目。 添加 NexT 主题：克隆 hexo-theme-next，复制配置文件到 _config.n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始搭建 Hexo + NexT 个人博客（2025 最新）">
+<meta property="og:url" content="https://itzdd9527.github.io/2025/06/01/hexo-next-setup/index.html">
+<meta property="og:site_name" content="V&#39;s Joker">
+<meta property="og:description" content="从零开始搭建 Hexo + NexT 个人博客（2025 最新）本系列将带你打造一款兼具“V 字面具”与“小丑”元素的个人博客，分为四大章节： 第一章 博客搭建 环境准备：安装 Node.js、Git 以及 VS Code。 安装 Hexo：npm install -g hexo-cli 并初始化项目。 添加 NexT 主题：克隆 hexo-theme-next，复制配置文件到 _config.n">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-01T13:14:02.000Z">
+<meta property="article:modified_time" content="2025-06-04T08:08:30.331Z">
+<meta property="article:author" content="V.Joker">
+<meta property="article:tag" content="V&#39;s Joker">
+<meta property="article:tag" content="小丑 (Joker)">
+<meta property="article:tag" content="Code Space">
+<meta property="article:tag" content="混沌理论 (Chaos Theory)">
+<meta property="article:tag" content="戏剧沉思 (Theatrical Musings)">
+<meta property="article:tag" content="蒙面真相 (Masked Truths)">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://itzdd9527.github.io/2025/06/01/hexo-next-setup/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://itzdd9527.github.io/2025/06/01/hexo-next-setup/","path":"2025/06/01/hexo-next-setup/","title":"从零开始搭建 Hexo + NexT 个人博客（2025 最新）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>从零开始搭建 Hexo + NexT 个人博客（2025 最新） | V's Joker</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="V's Joker" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">V's Joker</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember remember the chaos and smile</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-contact"><a href="/contact/" rel="section"><i class="fa fa-envelope fa-fw"></i>contact</a></li><li class="menu-item menu-item-subscribe"><a href="/subscribe/" rel="section"><i class="fa fa-bell fa-fw"></i>subscribe</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA-Hexo-NexT-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%882025-%E6%9C%80%E6%96%B0%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">从零开始搭建 Hexo + NexT 个人博客（2025 最新）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="nav-number">1.1.</span> <span class="nav-text">第一章 博客搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">第二章 博客配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%85%8D%E7%BD%AE%E8%BF%9B%E9%98%B6"><span class="nav-number">1.3.</span> <span class="nav-text">第三章 配置进阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%BB%86%E8%8A%82"><span class="nav-number">1.4.</span> <span class="nav-text">第四章 博客优化细节</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="V.Joker"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">V.Joker</p>
+  <div class="site-description" itemprop="description">在混沌中寻找真相，在黑暗里绽放微笑</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/itzdd9527" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;itzdd9527" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://itzdd9527.github.io/2025/06/01/hexo-next-setup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="从零开始搭建 Hexo + NexT 个人博客（2025 最新） | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从零开始搭建 Hexo + NexT 个人博客（2025 最新）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-01 21:14:02" itemprop="dateCreated datePublished" datetime="2025-06-01T21:14:02+08:00">2025-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-04 16:08:30" itemprop="dateModified" datetime="2025-06-04T16:08:30+08:00">2025-06-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="从零开始搭建-Hexo-NexT-个人博客（2025-最新）"><a href="#从零开始搭建-Hexo-NexT-个人博客（2025-最新）" class="headerlink" title="从零开始搭建 Hexo + NexT 个人博客（2025 最新）"></a>从零开始搭建 Hexo + NexT 个人博客（2025 最新）</h1><p>本系列将带你打造一款兼具“V 字面具”与“小丑”元素的个人博客，分为四大章节：</p>
+<h2 id="第一章-博客搭建"><a href="#第一章-博客搭建" class="headerlink" title="第一章 博客搭建"></a>第一章 博客搭建</h2><ol>
+<li><strong>环境准备</strong>：安装 Node.js、Git 以及 VS Code。</li>
+<li><strong>安装 Hexo</strong>：<code>npm install -g hexo-cli</code> 并初始化项目。</li>
+<li><strong>添加 NexT 主题</strong>：克隆 <code>hexo-theme-next</code>，复制配置文件到 <code>_config.next.yml</code>。</li>
+<li><strong>启动预览</strong>：<code>hexo s</code> 查看本地效果。</li>
+</ol>
+<h2 id="第二章-博客配置"><a href="#第二章-博客配置" class="headerlink" title="第二章 博客配置"></a>第二章 博客配置</h2><ol>
+<li><strong>站点信息</strong>：在 <code>_config.yml</code> 中设置标题、描述、关键词等。</li>
+<li><strong>主题菜单</strong>：在 <code>_config.next.yml</code> 配置导航，并新增 <code>contact</code>、<code>subscribe</code> 等页面链接。</li>
+<li><strong>博客分类</strong>：创建 <code>混沌理论</code>、<code>戏剧沉思</code>、<code>蒙面真相</code> 三大分类，用于技术、哲学及时事文章。</li>
+<li><strong>社交媒体图标</strong>：在 <code>social:</code> 部分放置 GitHub 等链接，可自定义 V 形面具或小丑帽图标。</li>
+<li><strong>评论区</strong>：启用支持匿名的评论插件，开启审核以维持基调。</li>
+<li><strong>搜索与 404 页面</strong>：启用本地搜索，占位符为“搜索混沌…”，并在 <code>source/404.md</code> 定制错误页面。</li>
+</ol>
+<h2 id="第三章-配置进阶"><a href="#第三章-配置进阶" class="headerlink" title="第三章 配置进阶"></a>第三章 配置进阶</h2><ol>
+<li><strong>联系页面</strong>：<code>/contact/</code> 页面提供表单，邮箱地址不公开，并加入谜语验证码。</li>
+<li><strong>订阅功能</strong>：<code>/subscribe/</code> 页面让访客输入邮箱，按钮文案为“加入假面舞会”。</li>
+<li><strong>自定义页脚</strong>：在 <code>source/_data/footer.njk</code> 添加语录“微笑是混乱的最佳面具”。</li>
+<li><strong>匿名评论</strong>：通过 Valine 或 Waline 设置，鼓励读者留言。</li>
+</ol>
+<h2 id="第四章-博客优化细节"><a href="#第四章-博客优化细节" class="headerlink" title="第四章 博客优化细节"></a>第四章 博客优化细节</h2><ol>
+<li><strong>SEO 与站点地图</strong>：安装 <code>hexo-generator-sitemap</code> 等插件并配置。</li>
+<li><strong>性能优化</strong>：开启压缩、使用 CDN、图片懒加载等。</li>
+<li><strong>备份与部署</strong>：使用 Git 管理源码，<code>hexo g &amp;&amp; hexo d</code> 部署到 GitHub Pages。</li>
+</ol>
+<blockquote>
+<p>至此，你的 Hexo + NexT 博客就大功告成，欢迎在评论区留下足迹。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/06/01/hexo-next-setup.old/" rel="prev" title="从零开始搭建 Hexo + NexT 个人博客（2025 最新）">
+                  <i class="fa fa-angle-left"></i> 从零开始搭建 Hexo + NexT 个人博客（2025 最新）
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">V.Joker</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><footer class="custom-footer">
+  <p>“微笑是混乱的最佳面具。”</p>
+  <p>&copy; 2025 V's Joker | <a href="/contact/">联系我</a></p>
+</footer>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
