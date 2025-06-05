@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itzdd9527.github.io/categories/index.html</loc>
+    
+    <lastmod>2025-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itzdd9527.github.io/tags/index.html</loc>
     
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +22,7 @@
   <url>
     <loc>https://itzdd9527.github.io/2025/06/01/hexo-next-setup-chapter1/</loc>
     
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +31,7 @@
   <url>
     <loc>https://itzdd9527.github.io/2025/06/01/hexo-next-setup-chapter2/</loc>
     
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +40,7 @@
   <url>
     <loc>https://itzdd9527.github.io/2025/06/01/hexo-next-setup-chapter3/</loc>
     
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +49,7 @@
   <url>
     <loc>https://itzdd9527.github.io/2025/06/01/hexo-next-setup-chapter4/</loc>
     
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +58,16 @@
   <url>
     <loc>https://itzdd9527.github.io/2025/06/01/hexo-next-setup/</loc>
     
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itzdd9527.github.io/2025/06/05/http-status-codes/</loc>
+    
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +76,7 @@
   <url>
     <loc>https://itzdd9527.github.io/about/index.html</loc>
     
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,16 +85,7 @@
   <url>
     <loc>https://itzdd9527.github.io/archives/index.html</loc>
     
-    <lastmod>2025-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://itzdd9527.github.io/categories/index.html</loc>
-    
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +94,7 @@
   <url>
     <loc>https://itzdd9527.github.io/404.html</loc>
     
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://itzdd9527.github.io/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,63 +111,84 @@
   
   <url>
     <loc>https://itzdd9527.github.io/tags/Hexo/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itzdd9527.github.io/tags/NexT/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itzdd9527.github.io/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itzdd9527.github.io/tags/V-s-Joker/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itzdd9527.github.io/tags/%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itzdd9527.github.io/tags/%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itzdd9527.github.io/tags/%E9%83%A8%E7%BD%B2%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itzdd9527.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://itzdd9527.github.io/tags/%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itzdd9527.github.io/tags/HTTP/</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itzdd9527.github.io/tags/%E7%8A%B6%E6%80%81%E7%A0%81/</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itzdd9527.github.io/tags/Web/</loc>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -167,7 +197,7 @@
   
   <url>
     <loc>https://itzdd9527.github.io/categories/chaos-theory/</loc>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
