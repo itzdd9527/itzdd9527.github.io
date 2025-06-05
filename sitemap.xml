@@ -11,42 +11,6 @@
   </url>
   
   <url>
-    <loc>https://www.vjoker.blog/2025/06/05/http-status-codes/</loc>
-    
-    <lastmod>2025-06-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/about/index.html</loc>
-    
-    <lastmod>2025-06-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/archives/index.html</loc>
-    
-    <lastmod>2025-06-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/categories/index.html</loc>
-    
-    <lastmod>2025-06-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter1/</loc>
     
     <lastmod>2025-06-05</lastmod>
@@ -84,6 +48,42 @@
   
   <url>
     <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup/</loc>
+    
+    <lastmod>2025-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/06/05/http-status-codes/</loc>
+    
+    <lastmod>2025-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/about/index.html</loc>
+    
+    <lastmod>2025-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/archives/index.html</loc>
+    
+    <lastmod>2025-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/categories/index.html</loc>
     
     <lastmod>2025-06-05</lastmod>
     
