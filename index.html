@@ -176,18 +176,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -263,7 +263,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 13:59:05" itemprop="dateModified" datetime="2025-06-05T13:59:05+08:00">2025-06-05</time>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -322,7 +322,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/06/05/http-status-codes/">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/07/01/http-status-codes_new/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -343,7 +343,7 @@
           
               <span class="post-sticky-flag" title="置顶">
                 <i class="fa fa-thumbtack"></i>
-              </span><a href="/2025/06/05/http-status-codes/" class="post-title-link" itemprop="url">Web 请求常见状态码解析：404、403、401</a>
+              </span><a href="/2025/07/01/http-status-codes_new/" class="post-title-link" itemprop="url">HTTP 状态码全解析：从信息到错误 (HTTP Status Codes Explained)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -353,9 +353,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-06-05 20:00:00 / 修改时间：13:59:05" itemprop="dateCreated datePublished" datetime="2025-06-05T20:00:00+08:00">2025-06-05</time>
+      <time title="创建时间：2025-07-01 09:00:00" itemprop="dateCreated datePublished" datetime="2025-07-01T09:00:00+08:00">2025-07-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -363,7 +369,11 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/chaos-theory/" itemprop="url" rel="index"><span itemprop="name">混沌理论</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">技术分享</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
         </span>
     </span>
 
@@ -377,13 +387,508 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="🎭-Web-请求状态码的神秘面纱"><a href="#🎭-Web-请求状态码的神秘面纱" class="headerlink" title="🎭 Web 请求状态码的神秘面纱"></a>🎭 Web 请求状态码的神秘面纱</h1><blockquote>
-<p>“在混沌的网络世界，每个数字都隐藏着故事” - V.Joker</p>
+          <h1 id="🚦-HTTP-状态码全解析：从信息到错误-V’s-Joker-剧场"><a href="#🚦-HTTP-状态码全解析：从信息到错误-V’s-Joker-剧场" class="headerlink" title="🚦 HTTP 状态码全解析：从信息到错误 - V’s Joker 剧场"></a>🚦 HTTP 状态码全解析：从信息到错误 - V’s Joker 剧场</h1><blockquote>
+<p>“每一个状态码都是服务器与客户端之间的一句暗号，一场精心编排的数字戏剧。” - V.Joker</p>
 </blockquote>
-<p>与浏览器互动时，我们经常遇到诸如 <code>404</code>、<code>403</code>、<code>401</code> 等状态码。它们像舞台上的信号灯，告诉我们请求是否成功，或是哪里出现了问题。让我们揭开这些数字背后的意义。</p>
+<p>欢迎来到 V’s Joker 的 HTTP 状态码剧场！在这个系列中，我们将一同揭开 HTTP 状态码的神秘面纱，从信息性的低语到服务器错误的咆哮，探索它们在网络通信中的重要角色。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2025/06/05/http-status-codes/#more" rel="contents">
+              <a class="btn" href="/2025/07/01/http-status-codes_new/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/07/05/http-status-codes-5xx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/07/05/http-status-codes-5xx/" class="post-title-link" itemprop="url">HTTP 状态码解析 - 5xx 服务器错误 (HTTP Status Codes - 5xx Server Error)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-05 10:00:00" itemprop="dateCreated datePublished" datetime="2025-07-05T10:00:00+08:00">2025-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">技术分享</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="🔥-第五章：HTTP-状态码-5xx-服务器错误"><a href="#🔥-第五章：HTTP-状态码-5xx-服务器错误" class="headerlink" title="🔥 第五章：HTTP 状态码 - 5xx 服务器错误"></a>🔥 第五章：HTTP 状态码 - 5xx 服务器错误</h1><blockquote>
+<p>“服务器似乎遇到了麻烦… 🔥 5xx 状态码表明服务器在尝试处理一个看起来有效的请求时，遇到了内部错误或无法完成请求。”</p>
+</blockquote>
+<p>欢迎来到 HTTP 状态码系列的最后一章。本章将重点介绍 5xx（服务器错误）状态码。这些状态码表示问题出在服务器端。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/07/05/http-status-codes-5xx/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/07/04/http-status-codes-4xx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/07/04/http-status-codes-4xx/" class="post-title-link" itemprop="url">HTTP 状态码解析 - 4xx 客户端错误 (HTTP Status Codes - 4xx Client Error)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-04 10:00:00" itemprop="dateCreated datePublished" datetime="2025-07-04T10:00:00+08:00">2025-07-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">技术分享</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="⚠️-第四幕：HTTP-状态码-4xx-客户端的独角戏"><a href="#⚠️-第四幕：HTTP-状态码-4xx-客户端的独角戏" class="headerlink" title="⚠️ 第四幕：HTTP 状态码 - 4xx 客户端的独角戏"></a>⚠️ 第四幕：HTTP 状态码 - 4xx 客户端的独角戏</h1><blockquote>
+<p>“哦，亲爱的观众，您似乎在您的剧本上写错了几笔！🎭 4xx 状态码，这通常意味着您（客户端）的请求有些……呃，创意十足，以至于我（服务器）无法理解或不愿处理。别担心，这只是小插曲！”</p>
+</blockquote>
+<p>欢迎来到 HTTP 状态码系列戏剧的第四幕。在这一幕中，我们将聚焦于那些由客户端引发的小小“惊喜”——4xx（客户端错误）状态码。当服务器认为您的请求存在某些瑕疵时，这些代码便会登场。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/07/04/http-status-codes-4xx/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/07/03/http-status-codes-3xx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/07/03/http-status-codes-3xx/" class="post-title-link" itemprop="url">HTTP 状态码解析 - 3xx 重定向消息 (HTTP Status Codes - 3xx Redirection)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-03 10:00:00" itemprop="dateCreated datePublished" datetime="2025-07-03T10:00:00+08:00">2025-07-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">技术分享</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="↪️-第三章：HTTP-状态码-3xx-重定向消息"><a href="#↪️-第三章：HTTP-状态码-3xx-重定向消息" class="headerlink" title="↪️ 第三章：HTTP 状态码 - 3xx 重定向消息"></a>↪️ 第三章：HTTP 状态码 - 3xx 重定向消息</h1><blockquote>
+<p>“请走这边！↪️ 3xx 状态码指示客户端需要采取进一步操作才能完成请求，通常是重定向到另一个 URL。”</p>
+</blockquote>
+<p>欢迎来到 HTTP 状态码系列的第三章。本章将详细介绍 3xx（重定向）状态码。这些状态码告诉客户端，为了完成请求，需要执行一些额外的操作，最常见的是自动跳转到另一个 URL。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/07/03/http-status-codes-3xx/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/07/02/http-status-codes-2xx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/07/02/http-status-codes-2xx/" class="post-title-link" itemprop="url">HTTP 状态码解析 - 2xx 成功响应 (HTTP Status Codes - 2xx Successful)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-02 10:00:00" itemprop="dateCreated datePublished" datetime="2025-07-02T10:00:00+08:00">2025-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">技术分享</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="✅-第二章：HTTP-状态码-2xx-成功响应"><a href="#✅-第二章：HTTP-状态码-2xx-成功响应" class="headerlink" title="✅ 第二章：HTTP 状态码 - 2xx 成功响应"></a>✅ 第二章：HTTP 状态码 - 2xx 成功响应</h1><blockquote>
+<p>“操作成功！✅ 2xx 状态码是服务器的肯定答复，表示请求已成功处理。”</p>
+</blockquote>
+<p>欢迎来到 HTTP 状态码系列的第二章。在本章中，我们将聚焦于 2xx（成功响应）状态码。这些状态码表明客户端的请求已被服务器成功接收、理解和接受。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/07/02/http-status-codes-2xx/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/07/01/http-status-codes-1xx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/07/01/http-status-codes-1xx/" class="post-title-link" itemprop="url">HTTP 状态码解析 - 1xx 信息性响应 (HTTP Status Codes - 1xx Informational)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-01 10:00:00" itemprop="dateCreated datePublished" datetime="2025-07-01T10:00:00+08:00">2025-07-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">技术分享</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="🚦-第一章：HTTP-状态码-1xx-信息性响应"><a href="#🚦-第一章：HTTP-状态码-1xx-信息性响应" class="headerlink" title="🚦 第一章：HTTP 状态码 - 1xx 信息性响应"></a>🚦 第一章：HTTP 状态码 - 1xx 信息性响应</h1><blockquote>
+<p>“请求已接收，继续处理… 🚦 1xx 状态码是服务器的低语，告知客户端一切按计划进行中。”</p>
+</blockquote>
+<p>欢迎来到 HTTP 状态码系列的第一章。在本章中，我们将深入探讨 1xx（信息性响应）状态码。这些状态码表示请求已被接收，并且处理过程正在继续。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/07/01/http-status-codes-1xx/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -450,7 +955,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 13:59:05" itemprop="dateModified" datetime="2025-06-05T13:59:05+08:00">2025-06-05</time>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -545,7 +1050,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 13:59:05" itemprop="dateModified" datetime="2025-06-05T13:59:05+08:00">2025-06-05</time>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -640,7 +1145,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 13:59:05" itemprop="dateModified" datetime="2025-06-05T13:59:05+08:00">2025-06-05</time>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -691,101 +1196,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="V.Joker">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="V's Joker">
-      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | V's Joker">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/01/hexo-next-setup-chapter1/" class="post-title-link" itemprop="url">从零开始搭建 Hexo + NexT 个人博客（第一章：博客搭建）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-06-01 21:00:00" itemprop="dateCreated datePublished" datetime="2025-06-01T21:00:00+08:00">2025-06-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 13:59:05" itemprop="dateModified" datetime="2025-06-05T13:59:05+08:00">2025-06-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/chaos-theory/" itemprop="url" rel="index"><span itemprop="name">混沌理论</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="🎭-第一章：博客搭建-面具后的数字世界"><a href="#🎭-第一章：博客搭建-面具后的数字世界" class="headerlink" title="🎭 第一章：博客搭建 - 面具后的数字世界"></a>🎭 第一章：博客搭建 - 面具后的数字世界</h1><blockquote>
-<p>“记住，记住，混沌与微笑” - 在这个数字化的假面舞会中，我们将创造一个属于小丑与V字面具的舞台。</p>
-</blockquote>
-<p>欢迎来到”V’s Joker”博客搭建系列的第一章。在这里，我们将从零开始，为您的数字面具搭建一个完美的舞台。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/06/01/hexo-next-setup-chapter1/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
 
 </div>
   </main>

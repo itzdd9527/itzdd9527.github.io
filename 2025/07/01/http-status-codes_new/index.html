@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.vjoker.blog","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="V&#39;s Joker Blog">
+<meta property="og:url" content="https://www.vjoker.blog/2025/07/01/http-status-codes_new/index.html">
+<meta property="og:site_name" content="V&#39;s Joker">
+<meta property="og:description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-01T01:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-10T14:30:33.372Z">
+<meta property="article:author" content="V.Joker">
+<meta property="article:tag" content="V&#39;s Joker">
+<meta property="article:tag" content="HTTP状态码">
+<meta property="article:tag" content="Web开发">
+<meta property="article:tag" content="系列教程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.vjoker.blog/2025/07/01/http-status-codes_new/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.vjoker.blog/2025/07/01/http-status-codes_new/","path":"2025/07/01/http-status-codes_new/","title":"HTTP 状态码全解析：从信息到错误 (HTTP Status Codes Explained)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>HTTP 状态码全解析：从信息到错误 (HTTP Status Codes Explained) | V's Joker</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="V's Joker" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">V's Joker</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember remember the chaos and smile</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%9A%A6-HTTP-%E7%8A%B6%E6%80%81%E7%A0%81%E5%85%A8%E8%A7%A3%E6%9E%90%EF%BC%9A%E4%BB%8E%E4%BF%A1%E6%81%AF%E5%88%B0%E9%94%99%E8%AF%AF-V%E2%80%99s-Joker-%E5%89%A7%E5%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">🚦 HTTP 状态码全解析：从信息到错误 - V’s Joker 剧场</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AA-HTTP-%E7%8A%B6%E6%80%81%E7%A0%81-%E5%89%A7%E7%9B%AE%E6%80%BB%E8%A7%88"><span class="nav-number">1.1.</span> <span class="nav-text">🎪 HTTP 状态码 - 剧目总览</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8E%AD-%E5%BA%8F%E5%B9%95%EF%BC%9A1xx-%E4%BF%A1%E6%81%AF%E6%8F%90%E7%A4%BA-Informational"><span class="nav-number">1.1.1.</span> <span class="nav-text">🎭 序幕：1xx 信息提示 (Informational)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8E%AD-%E7%AC%AC%E4%BA%8C%E5%B9%95%EF%BC%9A2xx-%E6%88%90%E5%8A%9F%E5%93%8D%E5%BA%94-Success"><span class="nav-number">1.1.2.</span> <span class="nav-text">🎭 第二幕：2xx 成功响应 (Success)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8E%AD-%E7%AC%AC%E4%B8%89%E5%B9%95%EF%BC%9A3xx-%E9%87%8D%E5%AE%9A%E5%90%91-Redirection"><span class="nav-number">1.1.3.</span> <span class="nav-text">🎭 第三幕：3xx 重定向 (Redirection)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8E%AD-%E7%AC%AC%E5%9B%9B%E5%B9%95%EF%BC%9A4xx-%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%94%99%E8%AF%AF-Client-Error"><span class="nav-number">1.1.4.</span> <span class="nav-text">🎭 第四幕：4xx 客户端错误 (Client Error)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8E%AD-%E7%AC%AC%E4%BA%94%E5%B9%95%EF%BC%9A5xx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%94%99%E8%AF%AF-Server-Error"><span class="nav-number">1.1.5.</span> <span class="nav-text">🎭 第五幕：5xx 服务器错误 (Server Error)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A4%94-%E4%B8%BA%E4%BD%95%E8%A6%81%E7%90%86%E8%A7%A3%E8%BF%99%E4%BA%9B%E7%A5%9E%E7%A7%98%E4%BB%A3%E7%A0%81%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">🤔 为何要理解这些神秘代码？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AD-%E7%BB%93%E8%AF%AD%EF%BC%9A%E5%A4%A7%E6%88%8F%E5%8D%B3%E5%B0%86%E4%B8%8A%E6%BC%94"><span class="nav-number">1.3.</span> <span class="nav-text">🎭 结语：大戏即将上演</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="V.Joker"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">V.Joker</p>
+  <div class="site-description" itemprop="description">在混沌中寻找真相，在黑暗里绽放微笑</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/itzdd9527" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;itzdd9527" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/07/01/http-status-codes_new/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="HTTP 状态码全解析：从信息到错误 (HTTP Status Codes Explained) | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTTP 状态码全解析：从信息到错误 (HTTP Status Codes Explained)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-01 09:00:00" itemprop="dateCreated datePublished" datetime="2025-07-01T09:00:00+08:00">2025-07-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-10 22:30:33" itemprop="dateModified" datetime="2025-06-10T22:30:33+08:00">2025-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">技术分享</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="🚦-HTTP-状态码全解析：从信息到错误-V’s-Joker-剧场"><a href="#🚦-HTTP-状态码全解析：从信息到错误-V’s-Joker-剧场" class="headerlink" title="🚦 HTTP 状态码全解析：从信息到错误 - V’s Joker 剧场"></a>🚦 HTTP 状态码全解析：从信息到错误 - V’s Joker 剧场</h1><blockquote>
+<p>“每一个状态码都是服务器与客户端之间的一句暗号，一场精心编排的数字戏剧。” - V.Joker</p>
+</blockquote>
+<p>欢迎来到 V’s Joker 的 HTTP 状态码剧场！在这个系列中，我们将一同揭开 HTTP 状态码的神秘面纱，从信息性的低语到服务器错误的咆哮，探索它们在网络通信中的重要角色。</p>
+<span id="more"></span>
+
+<h2 id="🎪-HTTP-状态码-剧目总览"><a href="#🎪-HTTP-状态码-剧目总览" class="headerlink" title="🎪 HTTP 状态码 - 剧目总览"></a>🎪 HTTP 状态码 - 剧目总览</h2><p>欢迎来到这场由数字主演的盛大戏剧！每一幕都将揭示 HTTP 状态码的不同面貌。准备好你的面具，演出开始了！</p>
+<h3 id="🎭-序幕：1xx-信息提示-Informational"><a href="#🎭-序幕：1xx-信息提示-Informational" class="headerlink" title="🎭 序幕：1xx 信息提示 (Informational)"></a>🎭 序幕：1xx 信息提示 (Informational)</h3><blockquote>
+<p>“嘘… 演出前的宁静，信息正在悄悄传递。一切按计划进行中，各位请保持期待！”</p>
+</blockquote>
+<ul>
+<li><strong>关键代码</strong>：<code>100 Continue</code>, <code>101 Switching Protocols</code></li>
+<li><strong><a href="./http-status-codes-1xx.md">➡️ 探索序幕：信息的低语</a></strong></li>
+</ul>
+<h3 id="🎭-第二幕：2xx-成功响应-Success"><a href="#🎭-第二幕：2xx-成功响应-Success" class="headerlink" title="🎭 第二幕：2xx 成功响应 (Success)"></a>🎭 第二幕：2xx 成功响应 (Success)</h3><blockquote>
+<p>“完美！聚光灯下，掌声雷动！客户端的请求已如预期般华丽完成。”</p>
+</blockquote>
+<ul>
+<li><strong>关键代码</strong>：<code>200 OK</code>, <code>201 Created</code>, <code>204 No Content</code></li>
+<li><strong><a href="./http-status-codes-2xx.md">➡️ 欣赏第二幕：成功的华尔兹</a></strong></li>
+</ul>
+<h3 id="🎭-第三幕：3xx-重定向-Redirection"><a href="#🎭-第三幕：3xx-重定向-Redirection" class="headerlink" title="🎭 第三幕：3xx 重定向 (Redirection)"></a>🎭 第三幕：3xx 重定向 (Redirection)</h3><blockquote>
+<p>“一个小小的舞台变动！各位观众，请随指引前往新的场景，精彩不容错过。”</p>
+</blockquote>
+<ul>
+<li><strong>关键代码</strong>：<code>301 Moved Permanently</code>, <code>302 Found</code>, <code>304 Not Modified</code></li>
+<li><strong><a href="./http-status-codes-3xx.md">➡️ 转场第三幕：重定向的迷宫</a></strong></li>
+</ul>
+<h3 id="🎭-第四幕：4xx-客户端错误-Client-Error"><a href="#🎭-第四幕：4xx-客户端错误-Client-Error" class="headerlink" title="🎭 第四幕：4xx 客户端错误 (Client Error)"></a>🎭 第四幕：4xx 客户端错误 (Client Error)</h3><blockquote>
+<p>“啊哈，看来是观众（客户端）的剧本出了点小差错！服务器表示很无奈，但错误方在您哦。”</p>
+</blockquote>
+<ul>
+<li><strong>关键代码</strong>：<code>400 Bad Request</code>, <code>401 Unauthorized</code>, <code>403 Forbidden</code>, <code>404 Not Found</code></li>
+<li><strong><a href="./http-status-codes-4xx.md">➡️ 深入第四幕：客户端的独白</a></strong></li>
+</ul>
+<h3 id="🎭-第五幕：5xx-服务器错误-Server-Error"><a href="#🎭-第五幕：5xx-服务器错误-Server-Error" class="headerlink" title="🎭 第五幕：5xx 服务器错误 (Server Error)"></a>🎭 第五幕：5xx 服务器错误 (Server Error)</h3><blockquote>
+<p>“灯光闪烁，后台一阵忙乱！看来是服务器端的演员们遇到了一些小麻烦。”</p>
+</blockquote>
+<ul>
+<li><strong>关键代码</strong>：<code>500 Internal Server Error</code>, <code>502 Bad Gateway</code>, <code>503 Service Unavailable</code></li>
+<li><strong><a href="./http-status-codes-5xx.md">➡️ 探秘第五幕：服务器的独角戏</a></strong></li>
+</ul>
+<h2 id="🤔-为何要理解这些神秘代码？"><a href="#🤔-为何要理解这些神秘代码？" class="headerlink" title="🤔 为何要理解这些神秘代码？"></a>🤔 为何要理解这些神秘代码？</h2><p>作为开发者、运维工程师，甚至是普通用户，理解 HTTP 状态码能帮助我们：</p>
+<ul>
+<li><strong>快速诊断问题</strong>：迅速定位是客户端还是服务器端的问题。</li>
+<li><strong>优化用户体验</strong>：根据不同的状态码给出更友好的提示。</li>
+<li><strong>提升应用性能</strong>：例如，通过 <code>304 Not Modified</code> 减少不必要的数据传输。</li>
+<li><strong>增强系统健壮性</strong>：更好地处理各种预期和意外情况。</li>
+</ul>
+<h2 id="🎭-结语：大戏即将上演"><a href="#🎭-结语：大戏即将上演" class="headerlink" title="🎭 结语：大戏即将上演"></a>🎭 结语：大戏即将上演</h2><p>准备好了吗？让我们逐一走进 HTTP 状态码的每一幕，深入理解它们背后的含义和应用场景。点击上方的链接，开始你的探索之旅吧！</p>
+<blockquote>
+<p>“在数字世界的舞台上，每一个细节都可能成为决定性的线索。记住，记住，混沌与微笑。” - V.Joker</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/V-s-Joker/" rel="tag"># V's Joker</a>
+              <a href="/tags/HTTP%E7%8A%B6%E6%80%81%E7%A0%81/" rel="tag"># HTTP状态码</a>
+              <a href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag"># Web开发</a>
+              <a href="/tags/%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" rel="tag"># 系列教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/06/01/hexo-next-setup-chapter4/" rel="prev" title="从零开始搭建 Hexo + NexT 个人博客（第四章：博客优化细节）">
+                  <i class="fa fa-angle-left"></i> 从零开始搭建 Hexo + NexT 个人博客（第四章：博客优化细节）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/07/01/http-status-codes-1xx/" rel="next" title="HTTP 状态码解析 - 1xx 信息性响应 (HTTP Status Codes - 1xx Informational)">
+                  HTTP 状态码解析 - 1xx 信息性响应 (HTTP Status Codes - 1xx Informational) <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">V.Joker</span>
+  </div><footer class="custom-footer">
+    <p>微笑是混乱的最佳面具</p>
+</footer>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
