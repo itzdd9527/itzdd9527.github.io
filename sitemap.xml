@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.vjoker.blog/archives/index.html</loc>
+    <loc>https://www.vjoker.blog/2025/07/01/http-status-codes_new/</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/07/10/work-reporting-guide/</loc>
     
     <lastmod>2025-06-10</lastmod>
     
@@ -12,6 +21,15 @@
   
   <url>
     <loc>https://www.vjoker.blog/about/index.html</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/archives/index.html</loc>
     
     <lastmod>2025-06-10</lastmod>
     
@@ -30,6 +48,42 @@
   
   <url>
     <loc>https://www.vjoker.blog/tags/index.html</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter1/</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter2/</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter3/</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter4/</loc>
     
     <lastmod>2025-06-10</lastmod>
     
@@ -84,51 +138,6 @@
   
   <url>
     <loc>https://www.vjoker.blog/2025/07/05/http-status-codes-5xx/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/07/01/http-status-codes_new/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter1/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter2/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter3/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter4/</loc>
     
     <lastmod>2025-06-10</lastmod>
     
@@ -294,6 +303,34 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://www.vjoker.blog/tags/%E5%B7%A5%E4%BD%9C%E6%B1%87%E6%8A%A5/</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/tags/%E6%B2%9F%E9%80%9A/</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/tags/%E5%91%A8%E6%8A%A5/</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/tags/%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -312,6 +349,20 @@
   
   <url>
     <loc>https://www.vjoker.blog/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/HTTP/</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/categories/%E7%AE%A1%E7%90%86%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/categories/%E7%AE%A1%E7%90%86%E5%AE%9E%E8%B7%B5/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/</loc>
     <lastmod>2025-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
