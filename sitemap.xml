@@ -2,7 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.vjoker.blog/categories/index.html</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.vjoker.blog/tags/index.html</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup/</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/07/01/http-status-codes-1xx/</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/07/02/http-status-codes-2xx/</loc>
+    
+    <lastmod>2025-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vjoker.blog/2025/07/03/http-status-codes-3xx/</loc>
     
     <lastmod>2025-06-10</lastmod>
     
@@ -56,15 +101,6 @@
   </url>
   
   <url>
-    <loc>https://www.vjoker.blog/categories/index.html</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter1/</loc>
     
     <lastmod>2025-06-10</lastmod>
@@ -93,42 +129,6 @@
   
   <url>
     <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter4/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/06/01/hexo-next-setup/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/07/01/http-status-codes-1xx/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/07/02/http-status-codes-2xx/</loc>
-    
-    <lastmod>2025-06-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vjoker.blog/2025/07/03/http-status-codes-3xx/</loc>
     
     <lastmod>2025-06-10</lastmod>
     
