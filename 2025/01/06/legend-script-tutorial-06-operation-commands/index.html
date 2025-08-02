@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.vjoker.blog","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="V&#39;s Joker Blog">
+<meta property="og:url" content="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-06-operation-commands/index.html">
+<meta property="og:site_name" content="V&#39;s Joker">
+<meta property="og:description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-06T09:30:00.000Z">
+<meta property="article:modified_time" content="2025-08-02T17:22:09.772Z">
+<meta property="article:author" content="V.Joker">
+<meta property="article:tag" content="传奇永恒">
+<meta property="article:tag" content="小丑传奇引擎">
+<meta property="article:tag" content="脚本开发">
+<meta property="article:tag" content="操作命令">
+<meta property="article:tag" content="功能实现">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-06-operation-commands/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.vjoker.blog/2025/01/06/legend-script-tutorial-06-operation-commands/","path":"2025/01/06/legend-script-tutorial-06-operation-commands/","title":"小丑传奇引擎脚本教程（六）：功能操作命令详解"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>小丑传奇引擎脚本教程（六）：功能操作命令详解 | V's Joker</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="V's Joker" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">V's Joker</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember remember the chaos and smile</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E4%B8%91%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E%E8%84%9A%E6%9C%AC%E6%95%99%E7%A8%8B%EF%BC%88%E5%85%AD%EF%BC%89%EF%BC%9A%E5%8A%9F%E8%83%BD%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">小丑传奇引擎脚本教程（六）：功能操作命令详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF-%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">🎯 操作命令概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%92-%E7%89%A9%E5%93%81%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text">🎒 物品操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E6%94%BE%E7%89%A9%E5%93%81"><span class="nav-number">1.2.1.</span> <span class="nav-text">发放物品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A3%E9%99%A4%E7%89%A9%E5%93%81"><span class="nav-number">1.2.2.</span> <span class="nav-text">扣除物品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%89%A9%E5%93%81%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.3.</span> <span class="nav-text">修改物品属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9B%BE%E4%B8%8A%E6%94%BE%E7%BD%AE%E7%89%A9%E5%93%81"><span class="nav-number">1.2.4.</span> <span class="nav-text">地图上放置物品</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%B0-%E7%BB%8F%E6%B5%8E%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.</span> <span class="nav-text">💰 经济操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%91%E5%B8%81%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.1.</span> <span class="nav-text">金币操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E5%AE%9D%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.2.</span> <span class="nav-text">元宝操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%B6%E5%B8%81%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.3.</span> <span class="nav-text">银币操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%91%A4-%E8%A7%92%E8%89%B2%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.4.</span> <span class="nav-text">👤 角色操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E7%BA%A7%E8%B0%83%E6%95%B4"><span class="nav-number">1.4.1.</span> <span class="nav-text">等级调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%B0%E5%8F%B7%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.4.2.</span> <span class="nav-text">称号设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PK%E5%80%BC%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.4.3.</span> <span class="nav-text">PK值设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E5%88%AB%E4%BF%AE%E6%94%B9"><span class="nav-number">1.4.4.</span> <span class="nav-text">性别修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%97%BA%EF%B8%8F-%E4%BC%A0%E9%80%81%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.5.</span> <span class="nav-text">🗺️ 传送操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E4%BC%A0%E9%80%81"><span class="nav-number">1.5.1.</span> <span class="nav-text">基础传送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E9%80%81%E5%85%B6%E4%BB%96%E7%8E%A9%E5%AE%B6"><span class="nav-number">1.5.2.</span> <span class="nav-text">传送其他玩家</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%A2-%E6%B6%88%E6%81%AF%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.6.</span> <span class="nav-text">📢 消息操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B6%88%E6%81%AF%E5%8F%91%E9%80%81"><span class="nav-number">1.6.1.</span> <span class="nav-text">消息发送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81"><span class="nav-number">1.6.2.</span> <span class="nav-text">邮件发送</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%A1-BUFF%E5%92%8C%E6%8A%80%E8%83%BD%E6%93%8D%E4%BD%9C"><span class="nav-number">1.7.</span> <span class="nav-text">⚡ BUFF和技能操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BUFF%E5%8F%91%E6%94%BE"><span class="nav-number">1.7.1.</span> <span class="nav-text">BUFF发放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%80%E8%83%BD%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.7.2.</span> <span class="nav-text">技能设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%B2-%E9%9A%8F%E6%9C%BA%E5%92%8C%E5%AE%9A%E6%97%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">1.8.</span> <span class="nav-text">🎲 随机和定时操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90"><span class="nav-number">1.8.1.</span> <span class="nav-text">随机数生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E5%AE%9A%E6%97%B6%E5%99%A8"><span class="nav-number">1.8.2.</span> <span class="nav-text">个人定时器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%B0-%E5%9C%B0%E5%9B%BE%E5%92%8C%E5%89%AF%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.9.</span> <span class="nav-text">🏰 地图和副本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9B%BE%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.9.1.</span> <span class="nav-text">地图参数设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%AF%E6%9C%AC%E5%9C%B0%E5%9B%BE%E5%8A%9F%E8%83%BD"><span class="nav-number">1.9.2.</span> <span class="nav-text">副本地图功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD%E6%93%8D%E4%BD%9C"><span class="nav-number">1.10.</span> <span class="nav-text">🛠️ 高级功能操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8A%9F%E8%83%BD%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.10.1.</span> <span class="nav-text">自动功能设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E4%BF%AE%E5%92%8C%E5%BC%BA%E5%8C%96"><span class="nav-number">1.10.2.</span> <span class="nav-text">特修和强化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%90%E9%AA%91%E5%92%8C%E5%AE%A0%E7%89%A9"><span class="nav-number">1.10.3.</span> <span class="nav-text">坐骑和宠物</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AE-%E7%BB%BC%E5%90%88%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B"><span class="nav-number">1.11.</span> <span class="nav-text">🎮 综合实战案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%9A%84%E5%95%86%E5%9F%8E%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.11.1.</span> <span class="nav-text">完整的商城系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B4%BB%E5%8A%A8%E5%A5%96%E5%8A%B1%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.11.2.</span> <span class="nav-text">活动奖励系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8B-%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8"><span class="nav-number">1.12.</span> <span class="nav-text">📋 操作命令速查表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E5%BB%BA%E8%AE%AE"><span class="nav-number">1.13.</span> <span class="nav-text">🛠️ 最佳实践建议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%93%8D%E4%BD%9C%E5%AE%89%E5%85%A8%E6%80%A7"><span class="nav-number">1.13.1.</span> <span class="nav-text">1. 操作安全性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E4%BC%98%E5%8C%96"><span class="nav-number">1.13.2.</span> <span class="nav-text">2. 用户体验优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E4%BC%98%E5%8C%96"><span class="nav-number">1.13.3.</span> <span class="nav-text">3. 批量操作优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%80-%E6%80%BB%E7%BB%93"><span class="nav-number">1.14.</span> <span class="nav-text">🚀 总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%89-%E7%B3%BB%E5%88%97%E5%AE%8C%E7%BB%93"><span class="nav-number">1.15.</span> <span class="nav-text">🎉 系列完结</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="V.Joker"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">V.Joker</p>
+  <div class="site-description" itemprop="description">在混沌中寻找真相，在黑暗里绽放微笑</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/itzdd9527" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;itzdd9527" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-06-operation-commands/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="小丑传奇引擎脚本教程（六）：功能操作命令详解 | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          小丑传奇引擎脚本教程（六）：功能操作命令详解
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-06 17:30:00" itemprop="dateCreated datePublished" datetime="2025-01-06T17:30:00+08:00">2025-01-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-03 01:22:09" itemprop="dateModified" datetime="2025-08-03T01:22:09+08:00">2025-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="小丑传奇引擎脚本教程（六）：功能操作命令详解"><a href="#小丑传奇引擎脚本教程（六）：功能操作命令详解" class="headerlink" title="小丑传奇引擎脚本教程（六）：功能操作命令详解"></a>小丑传奇引擎脚本教程（六）：功能操作命令详解</h1><blockquote>
+<p>“操作命令是脚本的执行力，掌握它们让你的创意变为现实！”</p>
+</blockquote>
+<p>在前面的教程中，我们学习了检测命令来判断各种条件。本篇将深入介绍小丑传奇引擎中各种功能操作命令的使用方法，这些命令是实现具体游戏功能的核心工具。通过掌握这些操作命令，你可以创建出功能丰富、交互完善的游戏系统。</p>
+<span id="more"></span>
+
+<h2 id="🎯-操作命令概述"><a href="#🎯-操作命令概述" class="headerlink" title="🎯 操作命令概述"></a>🎯 操作命令概述</h2><p>操作命令是脚本系统中用于执行具体功能的核心工具。小丑传奇引擎提供了丰富的操作命令，涵盖了游戏的各个方面：</p>
+<ul>
+<li><strong>物品操作</strong>：发放、扣除、修改物品属性</li>
+<li><strong>经济操作</strong>：调整金币、元宝、银币</li>
+<li><strong>角色操作</strong>：等级调整、属性修改、称号设置</li>
+<li><strong>传送操作</strong>：地图传送、坐标移动</li>
+<li><strong>系统操作</strong>：消息发送、定时器、随机数</li>
+<li><strong>高级功能</strong>：BUFF发放、技能设置、特殊效果</li>
+</ul>
+<h2 id="🎒-物品操作命令"><a href="#🎒-物品操作命令" class="headerlink" title="🎒 物品操作命令"></a>🎒 物品操作命令</h2><h3 id="发放物品"><a href="#发放物品" class="headerlink" title="发放物品"></a>发放物品</h3><p><strong>基础发放格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GiveItem 物品名称 数量 是否绑定</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数说明：</strong></p>
+<ul>
+<li><code>物品名称</code>：要发放的物品名称</li>
+<li><code>数量</code>：发放的数量</li>
+<li><code>是否绑定</code>：TRUE为绑定，FALSE为不绑定</li>
+</ul>
+<p><strong>实用示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[@物品发放示例]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">// 发放绑定物品</span><br><span class="line">GiveItem 生命药水 10 TRUE</span><br><span class="line">TopMessage &quot;获得10瓶绑定生命药水！&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 发放非绑定物品</span><br><span class="line">GiveItem 金币袋 1 FALSE</span><br><span class="line">TopMessage &quot;获得1个金币袋！&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 发放装备</span><br><span class="line">GiveItem 新手剑 1 FALSE</span><br><span class="line">TopMessage &quot;获得新手剑一把！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="扣除物品"><a href="#扣除物品" class="headerlink" title="扣除物品"></a>扣除物品</h3><p><strong>基础扣除格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TakeItem 物品名称 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>按IDX扣除：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TAKEITEMIDX 物品IDX 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[@物品扣除示例]</span><br><span class="line">#IF</span><br><span class="line">CheckItem 生命药水 5</span><br><span class="line">#ACT</span><br><span class="line">TakeItem 生命药水 5</span><br><span class="line">TopMessage &quot;消耗了5瓶生命药水&quot; FALSE</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;生命药水不足！&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 使用礼包类物品</span><br><span class="line">[@使用礼包]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">TAKEITEMIDX 99900001 1      // 扣除礼包</span><br><span class="line">GiveItem 装备碎片 10 FALSE</span><br><span class="line">GiveItem 强化石 5 FALSE</span><br><span class="line">TopMessage &quot;使用礼包成功！获得装备碎片和强化石&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改物品属性"><a href="#修改物品属性" class="headerlink" title="修改物品属性"></a>修改物品属性</h3><p><strong>格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetItemValue 装备位置 属性类型 数值</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@装备强化]</span><br><span class="line">#IF</span><br><span class="line">CheckGold 10000</span><br><span class="line">#ACT</span><br><span class="line">TakeGold 10000</span><br><span class="line">SetItemValue 0 攻击力 150    // 修改武器攻击力</span><br><span class="line">TopMessage &quot;武器强化成功！攻击力提升到150&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="地图上放置物品"><a href="#地图上放置物品" class="headerlink" title="地图上放置物品"></a>地图上放置物品</h3><p><strong>格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DropItem 物品名称 数量 X坐标 Y坐标</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[@掉落物品]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">DropItem 宝箱 1 100 100</span><br><span class="line">TopMessage &quot;在坐标(100,100)放置了一个宝箱&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="💰-经济操作命令"><a href="#💰-经济操作命令" class="headerlink" title="💰 经济操作命令"></a>💰 经济操作命令</h2><h3 id="金币操作"><a href="#金币操作" class="headerlink" title="金币操作"></a>金币操作</h3><p><strong>发放金币：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GiveGold 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>扣除金币：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TakeGold 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[@金币操作]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">// 任务奖励</span><br><span class="line">GiveGold 5000</span><br><span class="line">TopMessage &quot;任务完成！获得5000金币&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 购买物品</span><br><span class="line">#IF</span><br><span class="line">CheckGold 1000</span><br><span class="line">#ACT</span><br><span class="line">TakeGold 1000</span><br><span class="line">GiveItem 生命药水 10 FALSE</span><br><span class="line">TopMessage &quot;购买成功！花费1000金币&quot; FALSE</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;金币不足！需要1000金币&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="元宝操作"><a href="#元宝操作" class="headerlink" title="元宝操作"></a>元宝操作</h3><p><strong>发放元宝：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GiveGameGold 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>扣除元宝：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TakeGameGold 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[@元宝操作]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">// 充值奖励</span><br><span class="line">GiveGameGold 100</span><br><span class="line">TopMessage &quot;充值成功！获得100元宝&quot; FALSE</span><br><span class="line"></span><br><span class="line">// VIP购买</span><br><span class="line">#IF</span><br><span class="line">CheckGameGold 50</span><br><span class="line">#ACT</span><br><span class="line">TakeGameGold 50</span><br><span class="line">MOV U100 1                  // 设置VIP状态</span><br><span class="line">TopMessage &quot;开通VIP成功！花费50元宝&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="银币操作"><a href="#银币操作" class="headerlink" title="银币操作"></a>银币操作</h3><p><strong>发放银币：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GiveSilver 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>扣除银币：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TakeSilver 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[@银币操作]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveSilver 1000</span><br><span class="line">TopMessage &quot;获得1000银币！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="👤-角色操作命令"><a href="#👤-角色操作命令" class="headerlink" title="👤 角色操作命令"></a>👤 角色操作命令</h2><h3 id="等级调整"><a href="#等级调整" class="headerlink" title="等级调整"></a>等级调整</h3><p><strong>设置等级：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ChangeLevel 等级</span><br></pre></td></tr></table></figure>
+
+<p><strong>增加经验：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GiveExp 经验值</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[@等级操作]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">// 直接设置等级</span><br><span class="line">ChangeLevel 50</span><br><span class="line">TopMessage &quot;等级已调整为50级！&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 给予经验</span><br><span class="line">GiveExp 10000</span><br><span class="line">TopMessage &quot;获得10000经验值！&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 经验倍数设置</span><br><span class="line">SetExpRate 200              // 设置200%经验</span><br><span class="line">TopMessage &quot;经验倍数已设置为200%&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="称号设置"><a href="#称号设置" class="headerlink" title="称号设置"></a>称号设置</h3><p><strong>设置称号：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetTitle 称号编号</span><br></pre></td></tr></table></figure>
+
+<p><strong>自动佩戴称号：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AutoWearTitle 称号编号</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@称号操作]</span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 50</span><br><span class="line">#ACT</span><br><span class="line">SetTitle 2001               // 给予勇者称号</span><br><span class="line">AutoWearTitle 2001          // 自动佩戴</span><br><span class="line">TopMessage &quot;获得并佩戴【勇者】称号！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="PK值设置"><a href="#PK值设置" class="headerlink" title="PK值设置"></a>PK值设置</h3><p><strong>设置PK值：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetPKPoint 数值</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[@PK值操作]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">SetPKPoint 0                // 清除PK值</span><br><span class="line">TopMessage &quot;PK值已清零！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="性别修改"><a href="#性别修改" class="headerlink" title="性别修改"></a>性别修改</h3><p><strong>修改性别：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ChangeGender 性别</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@性别修改]</span><br><span class="line">#IF</span><br><span class="line">CheckGold 100000</span><br><span class="line">#ACT</span><br><span class="line">TakeGold 100000</span><br><span class="line">ChangeGender 女</span><br><span class="line">TopMessage &quot;性别修改成功！花费100000金币&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="🗺️-传送操作命令"><a href="#🗺️-传送操作命令" class="headerlink" title="🗺️ 传送操作命令"></a>🗺️ 传送操作命令</h2><h3 id="基础传送"><a href="#基础传送" class="headerlink" title="基础传送"></a>基础传送</h3><p><strong>传送到指定地图：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MOVE 地图ID X坐标 Y坐标</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[@传送操作]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">选择传送目的地：&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;新手村&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;比奇城&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:3&gt;沙巴克&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">MOVE 0 100 100              // 传送到新手村</span><br><span class="line">TopMessage &quot;传送到新手村成功！&quot; FALSE</span><br><span class="line"></span><br><span class="line">[@2]</span><br><span class="line">#IF</span><br><span class="line">CheckGold 1000</span><br><span class="line">#ACT</span><br><span class="line">TakeGold 1000</span><br><span class="line">MOVE 1 200 200              // 传送到比奇城</span><br><span class="line">TopMessage &quot;传送到比奇城成功！&quot; FALSE</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;传送费用1000金币！&quot; FALSE</span><br><span class="line"></span><br><span class="line">[@3]</span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 30</span><br><span class="line">#ACT</span><br><span class="line">MOVE 2 300 300              // 传送到沙巴克</span><br><span class="line">TopMessage &quot;传送到沙巴克成功！&quot; FALSE</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;需要30级才能进入沙巴克！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="传送其他玩家"><a href="#传送其他玩家" class="headerlink" title="传送其他玩家"></a>传送其他玩家</h3><p><strong>召唤玩家：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RecallPlayer 玩家名称</span><br></pre></td></tr></table></figure>
+
+<p><strong>传送玩家：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MovePlayer 玩家名称 地图ID X坐标 Y坐标</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[@管理员传送]</span><br><span class="line">#IF</span><br><span class="line">CheckIsAdmin                // 检测是否管理员</span><br><span class="line">#SAY</span><br><span class="line">管理员传送功能：&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;召唤玩家&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;传送玩家&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">请输入要召唤的玩家名称：&lt;BR&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; name=&quot;playername&quot;&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:1_1&gt;确认召唤&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1_1]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">RecallPlayer &lt;$INPUT(playername)&gt;</span><br><span class="line">TopMessage &quot;召唤玩家：&lt;$INPUT(playername)&gt;&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="📢-消息操作命令"><a href="#📢-消息操作命令" class="headerlink" title="📢 消息操作命令"></a>📢 消息操作命令</h2><h3 id="消息发送"><a href="#消息发送" class="headerlink" title="消息发送"></a>消息发送</h3><p><strong>顶部消息：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TopMessage &quot;消息内容&quot; 是否全服</span><br></pre></td></tr></table></figure>
+
+<p><strong>系统消息：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SystemMessage &quot;消息内容&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[@消息发送]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">// 个人消息</span><br><span class="line">TopMessage &quot;欢迎来到传奇世界！&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 全服消息</span><br><span class="line">TopMessage &quot;玩家&lt;$USERNAME&gt;完成了史诗任务！&quot; TRUE</span><br><span class="line"></span><br><span class="line">// 系统消息</span><br><span class="line">SystemMessage &quot;系统维护将在10分钟后开始&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="邮件发送"><a href="#邮件发送" class="headerlink" title="邮件发送"></a>邮件发送</h3><p><strong>发送邮件：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SendMail 收件人 标题 内容 附件物品 附件数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[@邮件发送]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">SendMail &lt;$USERNAME&gt; &quot;任务奖励&quot; &quot;恭喜完成任务！&quot; 金币袋 1</span><br><span class="line">TopMessage &quot;奖励已通过邮件发送！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="⚡-BUFF和技能操作"><a href="#⚡-BUFF和技能操作" class="headerlink" title="⚡ BUFF和技能操作"></a>⚡ BUFF和技能操作</h2><h3 id="BUFF发放"><a href="#BUFF发放" class="headerlink" title="BUFF发放"></a>BUFF发放</h3><p><strong>发放BUFF：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GiveBuff BUFF编号 持续时间</span><br></pre></td></tr></table></figure>
+
+<p><strong>移除BUFF：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RemoveBuff BUFF编号</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[@BUFF操作]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">// 发放攻击BUFF</span><br><span class="line">GiveBuff 1001 3600          // 持续1小时</span><br><span class="line">TopMessage &quot;获得攻击力提升BUFF！持续1小时&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 发放防御BUFF</span><br><span class="line">GiveBuff 1002 1800          // 持续30分钟</span><br><span class="line">TopMessage &quot;获得防御力提升BUFF！持续30分钟&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 移除负面BUFF</span><br><span class="line">RemoveBuff 2001</span><br><span class="line">TopMessage &quot;负面效果已清除！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="技能设置"><a href="#技能设置" class="headerlink" title="技能设置"></a>技能设置</h3><p><strong>学习技能：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LearnSkill 技能名称</span><br></pre></td></tr></table></figure>
+
+<p><strong>设置技能等级：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetSkillLevel 技能名称 等级</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@技能操作]</span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 10</span><br><span class="line">#ACT</span><br><span class="line">LearnSkill 基础剑术</span><br><span class="line">SetSkillLevel 基础剑术 3</span><br><span class="line">TopMessage &quot;学会基础剑术并提升到3级！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎲-随机和定时操作"><a href="#🎲-随机和定时操作" class="headerlink" title="🎲 随机和定时操作"></a>🎲 随机和定时操作</h2><h3 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h3><p><strong>生成随机数：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Random 最大值</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[@随机奖励]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">Random 100</span><br><span class="line">MOV N1 &lt;$RANDOM&gt;</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckCalc N1 &lt; 10           // 10%概率</span><br><span class="line">#ACT</span><br><span class="line">GiveItem 稀有装备 1 FALSE</span><br><span class="line">TopMessage &quot;恭喜获得稀有装备！&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckCalc N1 &lt; 30           // 20%概率</span><br><span class="line">#ACT</span><br><span class="line">GiveItem 高级药水 5 FALSE</span><br><span class="line">TopMessage &quot;获得高级药水5瓶！&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveGold 1000               // 70%概率</span><br><span class="line">TopMessage &quot;获得1000金币！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="个人定时器"><a href="#个人定时器" class="headerlink" title="个人定时器"></a>个人定时器</h3><p><strong>设置定时器：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetTimer 定时器ID 时间(秒)</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[@定时器操作]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">SetTimer 1 60               // 设置60秒定时器</span><br><span class="line">TopMessage &quot;1分钟后将获得奖励！&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 定时器触发时的处理</span><br><span class="line">[@Timer1]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveGold 5000</span><br><span class="line">TopMessage &quot;定时奖励：5000金币！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="🏰-地图和副本操作"><a href="#🏰-地图和副本操作" class="headerlink" title="🏰 地图和副本操作"></a>🏰 地图和副本操作</h2><h3 id="地图参数设置"><a href="#地图参数设置" class="headerlink" title="地图参数设置"></a>地图参数设置</h3><p><strong>设置地图属性：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetMapFlag 地图ID 属性 值</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[@地图设置]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">// 设置地图为安全区</span><br><span class="line">SetMapFlag 100 SafeZone 1</span><br><span class="line">TopMessage &quot;地图100已设置为安全区&quot; FALSE</span><br><span class="line"></span><br><span class="line">// 设置地图PK模式</span><br><span class="line">SetMapFlag 101 PKMode 1</span><br><span class="line">TopMessage &quot;地图101已开启PK模式&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="副本地图功能"><a href="#副本地图功能" class="headerlink" title="副本地图功能"></a>副本地图功能</h3><p><strong>创建副本：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CreateInstance 副本模板ID</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[@副本操作]</span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 30</span><br><span class="line">CheckGroupCount 3</span><br><span class="line">#ACT</span><br><span class="line">CreateInstance 1001</span><br><span class="line">TopMessage &quot;副本创建成功！正在传送...&quot; FALSE</span><br><span class="line">MOVE 1001 50 50</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;需要30级且3人组队才能进入副本！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="🛠️-高级功能操作"><a href="#🛠️-高级功能操作" class="headerlink" title="🛠️ 高级功能操作"></a>🛠️ 高级功能操作</h2><h3 id="自动功能设置"><a href="#自动功能设置" class="headerlink" title="自动功能设置"></a>自动功能设置</h3><p><strong>自动拾取：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetAutoPickup 开关</span><br></pre></td></tr></table></figure>
+
+<p><strong>自动穿戴：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AutoWearEquip 装备类型</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[@自动功能]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">SetAutoPickup 1             // 开启自动拾取</span><br><span class="line">TopMessage &quot;自动拾取已开启！&quot; FALSE</span><br><span class="line"></span><br><span class="line">AutoWearEquip 武器          // 自动穿戴武器</span><br><span class="line">TopMessage &quot;自动穿戴武器功能已开启！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="特修和强化"><a href="#特修和强化" class="headerlink" title="特修和强化"></a>特修和强化</h3><p><strong>特修装备：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SpecialRepair 装备位置</span><br></pre></td></tr></table></figure>
+
+<p><strong>全身特修：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SpecialRepairAll</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[@装备维修]</span><br><span class="line">#IF</span><br><span class="line">CheckGold &lt;$SPECIALREPAIRALLCOST&gt;</span><br><span class="line">#ACT</span><br><span class="line">TakeGold &lt;$SPECIALREPAIRALLCOST&gt;</span><br><span class="line">SpecialRepairAll</span><br><span class="line">TopMessage &quot;全身装备特修完成！&quot; FALSE</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;特修费用不足！需要&lt;$SPECIALREPAIRALLCOST&gt;金币&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="坐骑和宠物"><a href="#坐骑和宠物" class="headerlink" title="坐骑和宠物"></a>坐骑和宠物</h3><p><strong>召唤坐骑：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SummonHorse 坐骑ID</span><br></pre></td></tr></table></figure>
+
+<p><strong>设置坐骑属性：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetHorseAttribute 属性 数值</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@坐骑操作]</span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 40</span><br><span class="line">#ACT</span><br><span class="line">SummonHorse 1001            // 召唤坐骑</span><br><span class="line">SetHorseAttribute 速度 150  // 设置速度</span><br><span class="line">TopMessage &quot;获得高速坐骑！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎮-综合实战案例"><a href="#🎮-综合实战案例" class="headerlink" title="🎮 综合实战案例"></a>🎮 综合实战案例</h2><h3 id="完整的商城系统"><a href="#完整的商城系统" class="headerlink" title="完整的商城系统"></a>完整的商城系统</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">[@商城系统]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">=== 游戏商城 ===&lt;BR&gt;&lt;BR&gt;</span><br><span class="line">当前金币：&lt;$GOLD&gt;&lt;BR&gt;</span><br><span class="line">当前元宝：&lt;$GAMEGOLD&gt;&lt;BR&gt;&lt;BR&gt;</span><br><span class="line"></span><br><span class="line">&lt;#SO:1&gt;药水商店&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;装备商店&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:3&gt;特殊商品&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:4&gt;VIP商城&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">=== 药水商店 ===&lt;BR&gt;&lt;BR&gt;</span><br><span class="line">生命药水 - 100金币&lt;BR&gt;</span><br><span class="line">魔法药水 - 100金币&lt;BR&gt;</span><br><span class="line">万能药水 - 500金币&lt;BR&gt;&lt;BR&gt;</span><br><span class="line"></span><br><span class="line">&lt;#SO:1_1&gt;购买生命药水(10瓶)&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:1_2&gt;购买魔法药水(10瓶)&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:1_3&gt;购买万能药水(5瓶)&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:商城系统&gt;返回主菜单&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1_1]</span><br><span class="line">#IF</span><br><span class="line">CheckGold 1000</span><br><span class="line">CheckBagSize 10</span><br><span class="line">#ACT</span><br><span class="line">TakeGold 1000</span><br><span class="line">GiveItem 生命药水 10 FALSE</span><br><span class="line">TopMessage &quot;购买成功！获得生命药水10瓶&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;金币不足或背包空间不够！&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">[@2]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">=== 装备商店 ===&lt;BR&gt;&lt;BR&gt;</span><br><span class="line">新手剑 - 5000金币&lt;BR&gt;</span><br><span class="line">魔法杖 - 5000金币&lt;BR&gt;</span><br><span class="line">道士刀 - 5000金币&lt;BR&gt;&lt;BR&gt;</span><br><span class="line"></span><br><span class="line">&lt;#SO:2_1&gt;购买新手剑&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:2_2&gt;购买魔法杖&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:2_3&gt;购买道士刀&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:商城系统&gt;返回主菜单&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@2_1]</span><br><span class="line">#IF</span><br><span class="line">CheckGold 5000</span><br><span class="line">CheckClass 战士</span><br><span class="line">#ACT</span><br><span class="line">TakeGold 5000</span><br><span class="line">GiveItem 新手剑 1 FALSE</span><br><span class="line">AutoWearEquip 武器</span><br><span class="line">TopMessage &quot;购买新手剑成功！已自动装备&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;金币不足或职业不符！&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
+
+<h3 id="活动奖励系统"><a href="#活动奖励系统" class="headerlink" title="活动奖励系统"></a>活动奖励系统</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">[@活动奖励]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">=== 每日活动奖励 ===&lt;BR&gt;&lt;BR&gt;</span><br><span class="line">在线奖励：&lt;$STR(J100)&gt;/60分钟&lt;BR&gt;</span><br><span class="line">击杀奖励：&lt;$STR(J101)&gt;/100只&lt;BR&gt;</span><br><span class="line">充值奖励：今日充值&lt;$PAYMENTDAY&gt;元&lt;BR&gt;&lt;BR&gt;</span><br><span class="line"></span><br><span class="line">&lt;#SO:1&gt;领取在线奖励&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;领取击杀奖励&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:3&gt;领取充值奖励&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">CheckCalc J100 &gt;= 60</span><br><span class="line">CheckCalc J110 == 0         // 未领取标记</span><br><span class="line">#ACT</span><br><span class="line">MOV J110 1                  // 标记已领取</span><br><span class="line">GiveGold 10000</span><br><span class="line">GiveExp 5000</span><br><span class="line">GiveBuff 1001 3600          // 经验BUFF</span><br><span class="line">TopMessage &quot;在线奖励领取成功！&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;在线时间不足或已领取！&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">[@2]</span><br><span class="line">#IF</span><br><span class="line">CheckCalc J101 &gt;= 100</span><br><span class="line">CheckCalc J111 == 0</span><br><span class="line">#ACT</span><br><span class="line">MOV J111 1</span><br><span class="line">GiveItem 装备碎片 20 FALSE</span><br><span class="line">GiveItem 强化石 10 FALSE</span><br><span class="line">TopMessage &quot;击杀奖励领取成功！&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;击杀数量不足或已领取！&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
+
+<h2 id="📋-操作命令速查表"><a href="#📋-操作命令速查表" class="headerlink" title="📋 操作命令速查表"></a>📋 操作命令速查表</h2><table>
+<thead>
+<tr>
+<th>分类</th>
+<th>命令</th>
+<th>功能</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>物品</strong></td>
+<td><code>GiveItem</code></td>
+<td>发放物品</td>
+<td><code>GiveItem 药水 10 FALSE</code></td>
+</tr>
+<tr>
+<td><strong>物品</strong></td>
+<td><code>TakeItem</code></td>
+<td>扣除物品</td>
+<td><code>TakeItem 药水 5</code></td>
+</tr>
+<tr>
+<td><strong>金币</strong></td>
+<td><code>GiveGold</code></td>
+<td>发放金币</td>
+<td><code>GiveGold 1000</code></td>
+</tr>
+<tr>
+<td><strong>金币</strong></td>
+<td><code>TakeGold</code></td>
+<td>扣除金币</td>
+<td><code>TakeGold 500</code></td>
+</tr>
+<tr>
+<td><strong>元宝</strong></td>
+<td><code>GiveGameGold</code></td>
+<td>发放元宝</td>
+<td><code>GiveGameGold 100</code></td>
+</tr>
+<tr>
+<td><strong>经验</strong></td>
+<td><code>GiveExp</code></td>
+<td>发放经验</td>
+<td><code>GiveExp 5000</code></td>
+</tr>
+<tr>
+<td><strong>等级</strong></td>
+<td><code>ChangeLevel</code></td>
+<td>设置等级</td>
+<td><code>ChangeLevel 50</code></td>
+</tr>
+<tr>
+<td><strong>传送</strong></td>
+<td><code>MOVE</code></td>
+<td>传送玩家</td>
+<td><code>MOVE 0 100 100</code></td>
+</tr>
+<tr>
+<td><strong>消息</strong></td>
+<td><code>TopMessage</code></td>
+<td>发送消息</td>
+<td><code>TopMessage &quot;提示&quot; FALSE</code></td>
+</tr>
+<tr>
+<td><strong>BUFF</strong></td>
+<td><code>GiveBuff</code></td>
+<td>发放BUFF</td>
+<td><code>GiveBuff 1001 3600</code></td>
+</tr>
+<tr>
+<td><strong>技能</strong></td>
+<td><code>LearnSkill</code></td>
+<td>学习技能</td>
+<td><code>LearnSkill 火球术</code></td>
+</tr>
+<tr>
+<td><strong>称号</strong></td>
+<td><code>SetTitle</code></td>
+<td>设置称号</td>
+<td><code>SetTitle 1001</code></td>
+</tr>
+<tr>
+<td><strong>随机</strong></td>
+<td><code>Random</code></td>
+<td>生成随机数</td>
+<td><code>Random 100</code></td>
+</tr>
+<tr>
+<td><strong>定时</strong></td>
+<td><code>SetTimer</code></td>
+<td>设置定时器</td>
+<td><code>SetTimer 1 60</code></td>
+</tr>
+</tbody></table>
+<h2 id="🛠️-最佳实践建议"><a href="#🛠️-最佳实践建议" class="headerlink" title="🛠️ 最佳实践建议"></a>🛠️ 最佳实践建议</h2><h3 id="1-操作安全性"><a href="#1-操作安全性" class="headerlink" title="1. 操作安全性"></a>1. 操作安全性</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 推荐：操作前进行充分检查</span><br><span class="line">#IF</span><br><span class="line">CheckGold 1000              // 检查金币</span><br><span class="line">CheckBagSize 1              // 检查背包空间</span><br><span class="line">#ACT</span><br><span class="line">TakeGold 1000</span><br><span class="line">GiveItem 装备 1 FALSE</span><br><span class="line">TopMessage &quot;购买成功！&quot; FALSE</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;条件不满足！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-用户体验优化"><a href="#2-用户体验优化" class="headerlink" title="2. 用户体验优化"></a>2. 用户体验优化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 提供详细的操作反馈</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveGold 5000</span><br><span class="line">GiveExp 10000</span><br><span class="line">GiveBuff 1001 3600</span><br><span class="line">TopMessage &quot;奖励发放完成：金币+5000，经验+10000，获得经验BUFF&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-批量操作优化"><a href="#3-批量操作优化" class="headerlink" title="3. 批量操作优化"></a>3. 批量操作优化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 批量发放奖励</span><br><span class="line">[@批量奖励]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveGold 10000</span><br><span class="line">GiveGameGold 50</span><br><span class="line">GiveItem 药水包 1 FALSE</span><br><span class="line">GiveItem 装备包 1 FALSE</span><br><span class="line">GiveBuff 1001 7200</span><br><span class="line">TopMessage &quot;豪华奖励包发放完成！&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<h2 id="🚀-总结"><a href="#🚀-总结" class="headerlink" title="🚀 总结"></a>🚀 总结</h2><p>本篇教程详细介绍了小丑传奇引擎中各种功能操作命令的使用方法，包括：</p>
+<ul>
+<li>物品操作（发放、扣除、修改）</li>
+<li>经济操作（金币、元宝、银币）</li>
+<li>角色操作（等级、称号、属性）</li>
+<li>传送操作（地图传送、玩家召唤）</li>
+<li>消息操作（消息发送、邮件系统）</li>
+<li>高级功能（BUFF、技能、随机、定时）</li>
+</ul>
+<p>掌握这些操作命令是实现游戏功能的关键，通过合理组合各种操作命令，你可以创建出功能丰富、体验优秀的游戏系统。记住要注意操作的安全性和用户体验，让你的脚本更加专业和可靠！</p>
+<h2 id="🎉-系列完结"><a href="#🎉-系列完结" class="headerlink" title="🎉 系列完结"></a>🎉 系列完结</h2><p>至此，小丑传奇引擎脚本开发系列教程已经完整结束。通过六篇教程的学习，你已经掌握了：</p>
+<ol>
+<li><strong>基础语法和环境配置</strong></li>
+<li><strong>变量系统和数据处理</strong></li>
+<li><strong>触发机制和事件处理</strong></li>
+<li><strong>实战案例和高级技巧</strong></li>
+<li><strong>检测命令完全指南</strong></li>
+<li><strong>操作命令详细说明</strong></li>
+</ol>
+<p>希望这个系列能够帮助你成为一名优秀的传奇脚本开发者，在传奇的世界里创造出属于自己的精彩！</p>
+<hr>
+<p><em>本教程为小丑传奇引擎脚本开发系列的第六篇（完结篇），感谢您的学习和支持！</em></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BC%A0%E5%A5%87%E6%B0%B8%E6%81%92/" rel="tag"># 传奇永恒</a>
+              <a href="/tags/%E5%B0%8F%E4%B8%91%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" rel="tag"># 小丑传奇引擎</a>
+              <a href="/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/" rel="tag"># 脚本开发</a>
+              <a href="/tags/%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" rel="tag"># 操作命令</a>
+              <a href="/tags/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/" rel="tag"># 功能实现</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/01/06/legend-script-tutorial-05-detection-commands/" rel="prev" title="小丑传奇引擎脚本教程（五）：脚本检测命令完全指南">
+                  <i class="fa fa-angle-left"></i> 小丑传奇引擎脚本教程（五）：脚本检测命令完全指南
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/06/01/hexo-next-setup/" rel="next" title="从零开始搭建 Hexo + NexT 个人博客（2025 最新完整系列）">
+                  从零开始搭建 Hexo + NexT 个人博客（2025 最新完整系列） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">V.Joker</span>
+  </div><footer class="custom-footer">
+    <p>微笑是混乱的最佳面具</p>
+</footer>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

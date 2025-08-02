@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.vjoker.blog","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="V&#39;s Joker Blog">
+<meta property="og:url" content="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-05-detection-commands/index.html">
+<meta property="og:site_name" content="V&#39;s Joker">
+<meta property="og:description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-06T09:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-02T17:22:09.772Z">
+<meta property="article:author" content="V.Joker">
+<meta property="article:tag" content="传奇永恒">
+<meta property="article:tag" content="小丑传奇引擎">
+<meta property="article:tag" content="脚本开发">
+<meta property="article:tag" content="检测命令">
+<meta property="article:tag" content="条件判断">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-05-detection-commands/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.vjoker.blog/2025/01/06/legend-script-tutorial-05-detection-commands/","path":"2025/01/06/legend-script-tutorial-05-detection-commands/","title":"小丑传奇引擎脚本教程（五）：脚本检测命令完全指南"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>小丑传奇引擎脚本教程（五）：脚本检测命令完全指南 | V's Joker</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="V's Joker" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">V's Joker</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember remember the chaos and smile</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E4%B8%91%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E%E8%84%9A%E6%9C%AC%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%94%EF%BC%89%EF%BC%9A%E8%84%9A%E6%9C%AC%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97"><span class="nav-number">1.</span> <span class="nav-text">小丑传奇引擎脚本教程（五）：脚本检测命令完全指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF-%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">🎯 检测命令概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%91%A4-%E7%8E%A9%E5%AE%B6%E5%B1%9E%E6%80%A7%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text">👤 玩家属性检测命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E4%BA%BA%E7%89%A9%E7%AD%89%E7%BA%A7"><span class="nav-number">1.2.1.</span> <span class="nav-text">检测人物等级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E8%81%8C%E4%B8%9A%E6%80%A7%E5%88%AB"><span class="nav-number">1.2.2.</span> <span class="nav-text">检测职业性别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E4%BA%BA%E7%89%A9%E7%A7%B0%E5%8F%B7"><span class="nav-number">1.2.3.</span> <span class="nav-text">检测人物称号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%B0-%E7%BB%8F%E6%B5%8E%E7%B3%BB%E7%BB%9F%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.</span> <span class="nav-text">💰 经济系统检测命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E9%87%91%E5%B8%81%E6%95%B0%E9%87%8F"><span class="nav-number">1.3.1.</span> <span class="nav-text">检测金币数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E5%85%83%E5%AE%9D%E6%95%B0%E9%87%8F"><span class="nav-number">1.3.2.</span> <span class="nav-text">检测元宝数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E9%93%B6%E5%B8%81%E6%95%B0%E9%87%8F"><span class="nav-number">1.3.3.</span> <span class="nav-text">检测银币数量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%92-%E7%89%A9%E5%93%81%E7%B3%BB%E7%BB%9F%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4"><span class="nav-number">1.4.</span> <span class="nav-text">🎒 物品系统检测命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E8%83%8C%E5%8C%85%E7%89%A9%E5%93%81"><span class="nav-number">1.4.1.</span> <span class="nav-text">检测背包物品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E8%83%8C%E5%8C%85%E7%A9%BA%E9%97%B4"><span class="nav-number">1.4.2.</span> <span class="nav-text">检测背包空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E8%A3%85%E5%A4%87%E5%B1%9E%E6%80%A7"><span class="nav-number">1.4.3.</span> <span class="nav-text">检测装备属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%97%BA%EF%B8%8F-%E6%B8%B8%E6%88%8F%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4"><span class="nav-number">1.5.</span> <span class="nav-text">🗺️ 游戏状态检测命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E5%BD%93%E5%89%8D%E5%9C%B0%E5%9B%BE"><span class="nav-number">1.5.1.</span> <span class="nav-text">检测当前地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E5%9C%B0%E5%9B%BE%E6%80%AA%E7%89%A9%E6%95%B0%E9%87%8F"><span class="nav-number">1.5.2.</span> <span class="nav-text">检测地图怪物数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E5%B7%B2%E5%AD%A6%E6%8A%80%E8%83%BD"><span class="nav-number">1.5.3.</span> <span class="nav-text">检测已学技能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E6%8A%80%E8%83%BD%E7%AD%89%E7%BA%A7"><span class="nav-number">1.5.4.</span> <span class="nav-text">检测技能等级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%91%A5-%E7%A4%BE%E4%BA%A4%E7%B3%BB%E7%BB%9F%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4"><span class="nav-number">1.6.</span> <span class="nav-text">👥 社交系统检测命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E7%BB%84%E9%98%9F%E7%8A%B6%E6%80%81"><span class="nav-number">1.6.1.</span> <span class="nav-text">检测组队状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E6%B2%99%E5%9F%8E%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.6.2.</span> <span class="nav-text">检测沙城系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AE-%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4"><span class="nav-number">1.7.</span> <span class="nav-text">🎮 特殊功能检测命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8BVIP%E5%92%8C%E7%89%B9%E6%9D%83"><span class="nav-number">1.7.1.</span> <span class="nav-text">检测VIP和特权</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E9%BE%99%E5%8D%AB%E5%8A%9F%E8%83%BD"><span class="nav-number">1.7.2.</span> <span class="nav-text">检测龙卫功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E9%9A%8F%E6%9C%BA%E5%B1%9E%E6%80%A7"><span class="nav-number">1.7.3.</span> <span class="nav-text">检测随机属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E9%AB%98%E7%BA%A7%E6%A3%80%E6%B5%8B%E6%8A%80%E5%B7%A7"><span class="nav-number">1.8.</span> <span class="nav-text">🔧 高级检测技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%9D%A1%E4%BB%B6%E7%BB%84%E5%90%88%E6%A3%80%E6%B5%8B"><span class="nav-number">1.8.1.</span> <span class="nav-text">多条件组合检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%96%E5%8F%8D%E6%A3%80%E6%B5%8B"><span class="nav-number">1.8.2.</span> <span class="nav-text">取反检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OR%E6%9D%A1%E4%BB%B6%E6%A3%80%E6%B5%8B"><span class="nav-number">1.8.3.</span> <span class="nav-text">OR条件检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8B-%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8"><span class="nav-number">1.9.</span> <span class="nav-text">📋 检测命令速查表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E5%BB%BA%E8%AE%AE"><span class="nav-number">1.10.</span> <span class="nav-text">🛠️ 最佳实践建议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A3%80%E6%B5%8B%E9%A1%BA%E5%BA%8F%E4%BC%98%E5%8C%96"><span class="nav-number">1.10.1.</span> <span class="nav-text">1. 检测顺序优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%E4%BC%98%E5%8C%96"><span class="nav-number">1.10.2.</span> <span class="nav-text">2. 错误提示优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%9D%A1%E4%BB%B6%E7%BC%93%E5%AD%98"><span class="nav-number">1.10.3.</span> <span class="nav-text">3. 条件缓存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%80-%E4%B8%8B%E6%9C%9F%E9%A2%84%E5%91%8A"><span class="nav-number">1.11.</span> <span class="nav-text">🚀 下期预告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9A-%E6%80%BB%E7%BB%93"><span class="nav-number">1.12.</span> <span class="nav-text">📚 总结</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="V.Joker"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">V.Joker</p>
+  <div class="site-description" itemprop="description">在混沌中寻找真相，在黑暗里绽放微笑</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/itzdd9527" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;itzdd9527" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-05-detection-commands/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="小丑传奇引擎脚本教程（五）：脚本检测命令完全指南 | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          小丑传奇引擎脚本教程（五）：脚本检测命令完全指南
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-06 17:00:00" itemprop="dateCreated datePublished" datetime="2025-01-06T17:00:00+08:00">2025-01-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-03 01:22:09" itemprop="dateModified" datetime="2025-08-03T01:22:09+08:00">2025-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="小丑传奇引擎脚本教程（五）：脚本检测命令完全指南"><a href="#小丑传奇引擎脚本教程（五）：脚本检测命令完全指南" class="headerlink" title="小丑传奇引擎脚本教程（五）：脚本检测命令完全指南"></a>小丑传奇引擎脚本教程（五）：脚本检测命令完全指南</h1><blockquote>
+<p>“精准的检测是智能脚本的基础，掌握检测命令让你的脚本更加灵活！”</p>
+</blockquote>
+<p>在前面的教程中，我们学习了脚本开发的基础知识。本篇将深入介绍小丑传奇引擎中各种检测命令的使用方法，这些命令是实现复杂逻辑判断和条件控制的核心工具。通过掌握这些检测命令，你可以创建出更加智能和精准的游戏脚本。</p>
+<span id="more"></span>
+
+<h2 id="🎯-检测命令概述"><a href="#🎯-检测命令概述" class="headerlink" title="🎯 检测命令概述"></a>🎯 检测命令概述</h2><p>检测命令是脚本系统中用于判断游戏状态、玩家属性、物品信息等条件的核心工具。小丑传奇引擎提供了丰富的检测命令，涵盖了游戏的各个方面：</p>
+<ul>
+<li><strong>玩家属性检测</strong>：等级、职业、性别、称号等</li>
+<li><strong>经济系统检测</strong>：金币、元宝、银币等货币</li>
+<li><strong>物品系统检测</strong>：背包物品、装备属性、空间等</li>
+<li><strong>游戏状态检测</strong>：地图位置、技能、BUFF等</li>
+<li><strong>社交系统检测</strong>：组队、行会、沙城等</li>
+<li><strong>特殊功能检测</strong>：VIP、特权、随机属性等</li>
+</ul>
+<h2 id="👤-玩家属性检测命令"><a href="#👤-玩家属性检测命令" class="headerlink" title="👤 玩家属性检测命令"></a>👤 玩家属性检测命令</h2><h3 id="检测人物等级"><a href="#检测人物等级" class="headerlink" title="检测人物等级"></a>检测人物等级</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Level 比较符 等级值</span><br></pre></td></tr></table></figure>
+
+<p><strong>支持的比较符：</strong></p>
+<ul>
+<li><code>&gt;</code> ：大于</li>
+<li><code>&lt;</code> ：小于  </li>
+<li><code>&gt;=</code>：大于等于</li>
+<li><code>&lt;=</code>：小于等于</li>
+<li><code>==</code>：等于</li>
+<li><code>!=</code>：不等于</li>
+</ul>
+<p><strong>实用示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[@等级检测示例]</span><br><span class="line">#IF</span><br><span class="line">Level &lt; 50</span><br><span class="line">#ACT</span><br><span class="line">BREAK</span><br><span class="line">#SAY</span><br><span class="line">等级小于50级！请先升级到50级再来。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 50</span><br><span class="line">Level &lt; 100</span><br><span class="line">#SAY</span><br><span class="line">你的等级符合要求（50-99级）&lt;BR&gt;</span><br><span class="line">可以进入中级区域。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;进入中级区域&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 100</span><br><span class="line">#SAY</span><br><span class="line">高级玩家！&lt;BR&gt;</span><br><span class="line">你可以进入所有区域。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;进入中级区域&lt;#SO/&gt;&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;进入高级区域&lt;#SO/&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测职业性别"><a href="#检测职业性别" class="headerlink" title="检测职业性别"></a>检测职业性别</h3><p><strong>职业检测：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckClass 职业名称</span><br></pre></td></tr></table></figure>
+
+<p><strong>性别检测：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckGender 性别</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[@职业性别检测]</span><br><span class="line">#IF</span><br><span class="line">CheckClass 战士</span><br><span class="line">#SAY</span><br><span class="line">勇敢的战士，欢迎你！&lt;BR&gt;</span><br><span class="line">这里有专属于战士的装备。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckClass 法师</span><br><span class="line">#SAY</span><br><span class="line">智慧的法师，欢迎你！&lt;BR&gt;</span><br><span class="line">这里有强大的法术书籍。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckClass 道士</span><br><span class="line">#SAY</span><br><span class="line">神秘的道士，欢迎你！&lt;BR&gt;</span><br><span class="line">这里有珍贵的符纸和药材。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckGender 男</span><br><span class="line">#SAY</span><br><span class="line">男性玩家专属福利！</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckGender 女</span><br><span class="line">#SAY</span><br><span class="line">女性玩家专属福利！</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测人物称号"><a href="#检测人物称号" class="headerlink" title="检测人物称号"></a>检测人物称号</h3><p><strong>当前称号检测：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckTitle 称号编号</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[@称号检测]</span><br><span class="line">#IF</span><br><span class="line">CheckTitle 1001</span><br><span class="line">#SAY</span><br><span class="line">检测到你拥有【新手】称号！&lt;BR&gt;</span><br><span class="line">新手玩家可以获得额外保护。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckTitle 2001</span><br><span class="line">#SAY</span><br><span class="line">检测到你拥有【勇者】称号！&lt;BR&gt;</span><br><span class="line">勇者可以接受特殊任务。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckTitle 3001</span><br><span class="line">#SAY</span><br><span class="line">检测到你拥有【传说】称号！&lt;BR&gt;</span><br><span class="line">传说级玩家享受最高待遇！</span><br></pre></td></tr></table></figure>
+
+<h2 id="💰-经济系统检测命令"><a href="#💰-经济系统检测命令" class="headerlink" title="💰 经济系统检测命令"></a>💰 经济系统检测命令</h2><h3 id="检测金币数量"><a href="#检测金币数量" class="headerlink" title="检测金币数量"></a>检测金币数量</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckGold 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[@金币检测]</span><br><span class="line">#IF</span><br><span class="line">CheckGold 10000</span><br><span class="line">#SAY</span><br><span class="line">你有足够的金币（≥10000）&lt;BR&gt;</span><br><span class="line">可以购买高级装备。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;购买装备&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">金币不足！需要10000金币&lt;BR&gt;</span><br><span class="line">当前金币：&lt;$GOLD&gt;&lt;BR&gt;</span><br><span class="line">还需要：&lt;$STR(10000-&lt;$GOLD&gt;)&gt;金币</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测元宝数量"><a href="#检测元宝数量" class="headerlink" title="检测元宝数量"></a>检测元宝数量</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckGameGold 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[@元宝检测]</span><br><span class="line">#IF</span><br><span class="line">CheckGameGold 100</span><br><span class="line">#SAY</span><br><span class="line">元宝充足！可以购买VIP服务&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;开通VIP&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">元宝不足！需要100元宝&lt;BR&gt;</span><br><span class="line">当前元宝：&lt;$GAMEGOLD&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测银币数量"><a href="#检测银币数量" class="headerlink" title="检测银币数量"></a>检测银币数量</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckSilver 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[@银币检测]</span><br><span class="line">#IF</span><br><span class="line">CheckSilver 5000</span><br><span class="line">#SAY</span><br><span class="line">银币足够！可以兑换特殊物品&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;兑换物品&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">银币不足！需要5000银币&lt;BR&gt;</span><br><span class="line">当前银币：&lt;$SILVER&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎒-物品系统检测命令"><a href="#🎒-物品系统检测命令" class="headerlink" title="🎒 物品系统检测命令"></a>🎒 物品系统检测命令</h2><h3 id="检测背包物品"><a href="#检测背包物品" class="headerlink" title="检测背包物品"></a>检测背包物品</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckItem 物品名称 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[@物品检测]</span><br><span class="line">#IF</span><br><span class="line">CheckItem 生命药水 10</span><br><span class="line">#SAY</span><br><span class="line">药水充足！可以进行冒险&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;开始冒险&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">药水不足！需要10瓶生命药水&lt;BR&gt;</span><br><span class="line">建议先去商店购买药水。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckItem 传送卷 1</span><br><span class="line">#SAY</span><br><span class="line">拥有传送卷，可以快速传送&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;使用传送卷&lt;#SO/&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测背包空间"><a href="#检测背包空间" class="headerlink" title="检测背包空间"></a>检测背包空间</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckBagSize 空格数</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[@背包空间检测]</span><br><span class="line">#IF</span><br><span class="line">CheckBagSize 5</span><br><span class="line">#SAY</span><br><span class="line">背包空间充足！&lt;BR&gt;</span><br><span class="line">可以接受任务奖励。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;领取奖励&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">背包空间不足！&lt;BR&gt;</span><br><span class="line">请先清理背包，至少需要5个空格。</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测装备属性"><a href="#检测装备属性" class="headerlink" title="检测装备属性"></a>检测装备属性</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckItemValue 装备位置 属性类型 数值</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[@装备属性检测]</span><br><span class="line">#IF</span><br><span class="line">CheckItemValue 0 攻击力 100</span><br><span class="line">#SAY</span><br><span class="line">武器攻击力达标！&lt;BR&gt;</span><br><span class="line">可以挑战高级BOSS。</span><br><span class="line">#ELSESAY</span><br><span class="line">武器攻击力不足！&lt;BR&gt;</span><br><span class="line">需要攻击力≥100的武器。</span><br></pre></td></tr></table></figure>
+
+<h2 id="🗺️-游戏状态检测命令"><a href="#🗺️-游戏状态检测命令" class="headerlink" title="🗺️ 游戏状态检测命令"></a>🗺️ 游戏状态检测命令</h2><h3 id="检测当前地图"><a href="#检测当前地图" class="headerlink" title="检测当前地图"></a>检测当前地图</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckMap 地图编号</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[@地图检测]</span><br><span class="line">#IF</span><br><span class="line">CheckMap 0</span><br><span class="line">#SAY</span><br><span class="line">欢迎来到新手村！&lt;BR&gt;</span><br><span class="line">这里是冒险的起点。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckMap 100</span><br><span class="line">#SAY</span><br><span class="line">你在高级练级区！&lt;BR&gt;</span><br><span class="line">小心强大的怪物。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckMap 999</span><br><span class="line">#SAY</span><br><span class="line">你在特殊地图中！&lt;BR&gt;</span><br><span class="line">这里有隐藏的宝藏。</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测地图怪物数量"><a href="#检测地图怪物数量" class="headerlink" title="检测地图怪物数量"></a>检测地图怪物数量</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckMapMonCount 地图编号 数量</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[@怪物数量检测]</span><br><span class="line">#IF</span><br><span class="line">CheckMapMonCount 100 50</span><br><span class="line">#SAY</span><br><span class="line">当前地图怪物较多（≥50只）&lt;BR&gt;</span><br><span class="line">适合练级和打宝。</span><br><span class="line">#ELSESAY</span><br><span class="line">当前地图怪物较少&lt;BR&gt;</span><br><span class="line">可能需要等待刷新。</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测已学技能"><a href="#检测已学技能" class="headerlink" title="检测已学技能"></a>检测已学技能</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckSkill 技能名称</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[@技能检测]</span><br><span class="line">#IF</span><br><span class="line">CheckSkill 基础剑术</span><br><span class="line">#SAY</span><br><span class="line">你已学会基础剑术！&lt;BR&gt;</span><br><span class="line">可以学习高级剑术。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;学习高级剑术&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">请先学习基础剑术！</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测技能等级"><a href="#检测技能等级" class="headerlink" title="检测技能等级"></a>检测技能等级</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckSkillLevel 技能名称 等级</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[@技能等级检测]</span><br><span class="line">#IF</span><br><span class="line">CheckSkillLevel 火球术 3</span><br><span class="line">#SAY</span><br><span class="line">火球术等级达到3级！&lt;BR&gt;</span><br><span class="line">可以学习更高级的法术。</span><br><span class="line">#ELSESAY</span><br><span class="line">火球术等级不足！&lt;BR&gt;</span><br><span class="line">请先将火球术练到3级。</span><br></pre></td></tr></table></figure>
+
+<h2 id="👥-社交系统检测命令"><a href="#👥-社交系统检测命令" class="headerlink" title="👥 社交系统检测命令"></a>👥 社交系统检测命令</h2><h3 id="检测组队状态"><a href="#检测组队状态" class="headerlink" title="检测组队状态"></a>检测组队状态</h3><p><strong>检测是否队长：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckIsLeader</span><br></pre></td></tr></table></figure>
+
+<p><strong>检测组队人数：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckGroupCount 人数</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[@组队检测]</span><br><span class="line">#IF</span><br><span class="line">CheckIsLeader</span><br><span class="line">#SAY</span><br><span class="line">你是队长！&lt;BR&gt;</span><br><span class="line">可以管理队伍和分配任务。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;队伍管理&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">你不是队长！&lt;BR&gt;</span><br><span class="line">请联系队长进行操作。</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckGroupCount 3</span><br><span class="line">#SAY</span><br><span class="line">队伍人数充足（≥3人）&lt;BR&gt;</span><br><span class="line">可以挑战团队副本。&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;进入副本&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">队伍人数不足！&lt;BR&gt;</span><br><span class="line">需要至少3人才能进入副本。</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测沙城系统"><a href="#检测沙城系统" class="headerlink" title="检测沙城系统"></a>检测沙城系统</h3><p><strong>检测沙城成员：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckCastleMember</span><br></pre></td></tr></table></figure>
+
+<p><strong>检测沙城老大：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckCastleLord</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[@沙城检测]</span><br><span class="line">#IF</span><br><span class="line">CheckCastleLord</span><br><span class="line">#SAY</span><br><span class="line">沙城之主！&lt;BR&gt;</span><br><span class="line">享受最高荣誉和特权！&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;沙城管理&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckCastleMember</span><br><span class="line">#SAY</span><br><span class="line">沙城成员！&lt;BR&gt;</span><br><span class="line">可以享受沙城福利。&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;领取福利&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">非沙城成员&lt;BR&gt;</span><br><span class="line">努力争夺沙城吧！</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎮-特殊功能检测命令"><a href="#🎮-特殊功能检测命令" class="headerlink" title="🎮 特殊功能检测命令"></a>🎮 特殊功能检测命令</h2><h3 id="检测VIP和特权"><a href="#检测VIP和特权" class="headerlink" title="检测VIP和特权"></a>检测VIP和特权</h3><p><strong>检测玛法特权：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckMarfa 特权编号</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[@特权检测]</span><br><span class="line">#IF</span><br><span class="line">CheckMarfa 1</span><br><span class="line">#SAY</span><br><span class="line">拥有玛法特权1！&lt;BR&gt;</span><br><span class="line">享受经验加成和特殊待遇。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;特权商城&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckMarfa 2</span><br><span class="line">#SAY</span><br><span class="line">拥有玛法特权2！&lt;BR&gt;</span><br><span class="line">享受更高级的特权服务。&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;高级特权&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">未开通玛法特权&lt;BR&gt;</span><br><span class="line">&lt;#SO:3&gt;开通特权&lt;#SO/&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测龙卫功能"><a href="#检测龙卫功能" class="headerlink" title="检测龙卫功能"></a>检测龙卫功能</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckPhysique</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[@龙卫检测]</span><br><span class="line">#IF</span><br><span class="line">CheckPhysique</span><br><span class="line">#SAY</span><br><span class="line">龙卫功能已开启！&lt;BR&gt;</span><br><span class="line">可以使用龙卫技能和装备。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;龙卫系统&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">龙卫功能未开启&lt;BR&gt;</span><br><span class="line">&lt;#SO:2&gt;开启龙卫&lt;#SO/&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测随机属性"><a href="#检测随机属性" class="headerlink" title="检测随机属性"></a>检测随机属性</h3><p><strong>命令格式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckRandom 概率值</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[@随机检测]</span><br><span class="line">#IF</span><br><span class="line">CheckRandom 50</span><br><span class="line">#SAY</span><br><span class="line">幸运！触发了50%概率事件&lt;BR&gt;</span><br><span class="line">获得额外奖励！&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;领取奖励&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">很遗憾，这次没有触发特殊事件。</span><br></pre></td></tr></table></figure>
+
+<h2 id="🔧-高级检测技巧"><a href="#🔧-高级检测技巧" class="headerlink" title="🔧 高级检测技巧"></a>🔧 高级检测技巧</h2><h3 id="多条件组合检测"><a href="#多条件组合检测" class="headerlink" title="多条件组合检测"></a>多条件组合检测</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[@复合条件检测]</span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 50</span><br><span class="line">CheckClass 战士</span><br><span class="line">CheckGold 10000</span><br><span class="line">CheckItem 强化石 5</span><br><span class="line">#SAY</span><br><span class="line">所有条件都满足！&lt;BR&gt;</span><br><span class="line">可以进行装备强化。&lt;BR&gt;</span><br><span class="line">&lt;#SO:1&gt;开始强化&lt;#SO/&gt;</span><br><span class="line">#ELSESAY</span><br><span class="line">条件不满足：&lt;BR&gt;</span><br><span class="line">需要：50级战士、10000金币、5个强化石</span><br></pre></td></tr></table></figure>
+
+<h3 id="取反检测"><a href="#取反检测" class="headerlink" title="取反检测"></a>取反检测</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[@取反检测]</span><br><span class="line">#IF</span><br><span class="line">NOT CheckClass 新手</span><br><span class="line">#SAY</span><br><span class="line">你不是新手！&lt;BR&gt;</span><br><span class="line">可以接受高级任务。</span><br><span class="line">#ELSESAY</span><br><span class="line">新手玩家请先完成基础教程。</span><br></pre></td></tr></table></figure>
+
+<h3 id="OR条件检测"><a href="#OR条件检测" class="headerlink" title="OR条件检测"></a>OR条件检测</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[@OR条件检测]</span><br><span class="line">#OR</span><br><span class="line">CheckClass 战士</span><br><span class="line">CheckClass 骑士</span><br><span class="line">#SAY</span><br><span class="line">物理职业玩家！&lt;BR&gt;</span><br><span class="line">这里有适合你的装备。</span><br><span class="line"></span><br><span class="line">#OR</span><br><span class="line">Level &gt;= 100</span><br><span class="line">CheckMarfa 1</span><br><span class="line">#SAY</span><br><span class="line">高级玩家或VIP！&lt;BR&gt;</span><br><span class="line">享受特殊服务。</span><br></pre></td></tr></table></figure>
+
+<h2 id="📋-检测命令速查表"><a href="#📋-检测命令速查表" class="headerlink" title="📋 检测命令速查表"></a>📋 检测命令速查表</h2><table>
+<thead>
+<tr>
+<th>分类</th>
+<th>命令</th>
+<th>功能</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>等级</strong></td>
+<td><code>Level</code></td>
+<td>检测玩家等级</td>
+<td><code>Level &gt;= 50</code></td>
+</tr>
+<tr>
+<td><strong>职业</strong></td>
+<td><code>CheckClass</code></td>
+<td>检测职业</td>
+<td><code>CheckClass 战士</code></td>
+</tr>
+<tr>
+<td><strong>性别</strong></td>
+<td><code>CheckGender</code></td>
+<td>检测性别</td>
+<td><code>CheckGender 男</code></td>
+</tr>
+<tr>
+<td><strong>称号</strong></td>
+<td><code>CheckTitle</code></td>
+<td>检测称号</td>
+<td><code>CheckTitle 1001</code></td>
+</tr>
+<tr>
+<td><strong>金币</strong></td>
+<td><code>CheckGold</code></td>
+<td>检测金币</td>
+<td><code>CheckGold 10000</code></td>
+</tr>
+<tr>
+<td><strong>元宝</strong></td>
+<td><code>CheckGameGold</code></td>
+<td>检测元宝</td>
+<td><code>CheckGameGold 100</code></td>
+</tr>
+<tr>
+<td><strong>银币</strong></td>
+<td><code>CheckSilver</code></td>
+<td>检测银币</td>
+<td><code>CheckSilver 5000</code></td>
+</tr>
+<tr>
+<td><strong>物品</strong></td>
+<td><code>CheckItem</code></td>
+<td>检测背包物品</td>
+<td><code>CheckItem 药水 10</code></td>
+</tr>
+<tr>
+<td><strong>空间</strong></td>
+<td><code>CheckBagSize</code></td>
+<td>检测背包空间</td>
+<td><code>CheckBagSize 5</code></td>
+</tr>
+<tr>
+<td><strong>地图</strong></td>
+<td><code>CheckMap</code></td>
+<td>检测当前地图</td>
+<td><code>CheckMap 100</code></td>
+</tr>
+<tr>
+<td><strong>技能</strong></td>
+<td><code>CheckSkill</code></td>
+<td>检测已学技能</td>
+<td><code>CheckSkill 火球术</code></td>
+</tr>
+<tr>
+<td><strong>队长</strong></td>
+<td><code>CheckIsLeader</code></td>
+<td>检测是否队长</td>
+<td><code>CheckIsLeader</code></td>
+</tr>
+<tr>
+<td><strong>组队</strong></td>
+<td><code>CheckGroupCount</code></td>
+<td>检测组队人数</td>
+<td><code>CheckGroupCount 3</code></td>
+</tr>
+<tr>
+<td><strong>特权</strong></td>
+<td><code>CheckMarfa</code></td>
+<td>检测玛法特权</td>
+<td><code>CheckMarfa 1</code></td>
+</tr>
+<tr>
+<td><strong>随机</strong></td>
+<td><code>CheckRandom</code></td>
+<td>随机概率检测</td>
+<td><code>CheckRandom 50</code></td>
+</tr>
+</tbody></table>
+<h2 id="🛠️-最佳实践建议"><a href="#🛠️-最佳实践建议" class="headerlink" title="🛠️ 最佳实践建议"></a>🛠️ 最佳实践建议</h2><h3 id="1-检测顺序优化"><a href="#1-检测顺序优化" class="headerlink" title="1. 检测顺序优化"></a>1. 检测顺序优化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 推荐：先检测简单条件，再检测复杂条件</span><br><span class="line">#IF</span><br><span class="line">Level &lt; 10              // 简单的等级检测</span><br><span class="line">#ACT</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckItem 稀有材料 100  // 复杂的物品检测</span><br><span class="line">#ACT</span><br><span class="line">// 复杂逻辑处理</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-错误提示优化"><a href="#2-错误提示优化" class="headerlink" title="2. 错误提示优化"></a>2. 错误提示优化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[@友好的错误提示]</span><br><span class="line">#IF</span><br><span class="line">Level &lt; 50</span><br><span class="line">#SAY</span><br><span class="line">等级不足！&lt;BR&gt;</span><br><span class="line">当前等级：&lt;$LEVEL&gt;&lt;BR&gt;</span><br><span class="line">需要等级：50&lt;BR&gt;</span><br><span class="line">还需升级：&lt;$STR(50-&lt;$LEVEL&gt;)&gt;级</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-条件缓存"><a href="#3-条件缓存" class="headerlink" title="3. 条件缓存"></a>3. 条件缓存</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 将复杂检测结果存储在变量中</span><br><span class="line">[@条件缓存]</span><br><span class="line">#IF</span><br><span class="line">Level &gt;= 50</span><br><span class="line">CheckClass 战士</span><br><span class="line">CheckGold 10000</span><br><span class="line">#ACT</span><br><span class="line">MOV N1 1                // 标记条件满足</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">CheckCalc N1 == 1</span><br><span class="line">#SAY</span><br><span class="line">条件满足，可以执行操作！</span><br></pre></td></tr></table></figure>
+
+<h2 id="🚀-下期预告"><a href="#🚀-下期预告" class="headerlink" title="🚀 下期预告"></a>🚀 下期预告</h2><p>在下一篇教程中，我们将学习：</p>
+<ul>
+<li>功能操作命令的完整使用方法</li>
+<li>物品发放、传送、BUFF等操作技巧</li>
+<li>高级功能的实现和应用</li>
+<li>完整的功能模块开发案例</li>
+</ul>
+<h2 id="📚-总结"><a href="#📚-总结" class="headerlink" title="📚 总结"></a>📚 总结</h2><p>本篇教程详细介绍了小丑传奇引擎中各种检测命令的使用方法，包括：</p>
+<ul>
+<li>玩家属性检测（等级、职业、称号等）</li>
+<li>经济系统检测（金币、元宝、银币）</li>
+<li>物品系统检测（背包物品、装备属性）</li>
+<li>游戏状态检测（地图、技能、BUFF）</li>
+<li>社交系统检测（组队、沙城）</li>
+<li>特殊功能检测（VIP、特权、随机）</li>
+</ul>
+<p>掌握这些检测命令是开发高质量脚本的基础，通过合理使用各种检测条件，你可以创建出逻辑严密、用户友好的游戏系统。记住要注意检测顺序的优化和友好的错误提示，让你的脚本更加专业和实用！</p>
+<hr>
+<p><em>本教程为小丑传奇引擎脚本开发系列的第五篇，下期将带来功能操作命令的完整指南！</em></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BC%A0%E5%A5%87%E6%B0%B8%E6%81%92/" rel="tag"># 传奇永恒</a>
+              <a href="/tags/%E5%B0%8F%E4%B8%91%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" rel="tag"># 小丑传奇引擎</a>
+              <a href="/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/" rel="tag"># 脚本开发</a>
+              <a href="/tags/%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4/" rel="tag"># 检测命令</a>
+              <a href="/tags/%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/" rel="tag"># 条件判断</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/01/06/legend-script-tutorial-04-advanced/" rel="prev" title="小丑传奇引擎脚本教程（四）：实战案例与高级技巧">
+                  <i class="fa fa-angle-left"></i> 小丑传奇引擎脚本教程（四）：实战案例与高级技巧
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/01/06/legend-script-tutorial-06-operation-commands/" rel="next" title="小丑传奇引擎脚本教程（六）：功能操作命令详解">
+                  小丑传奇引擎脚本教程（六）：功能操作命令详解 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">V.Joker</span>
+  </div><footer class="custom-footer">
+    <p>微笑是混乱的最佳面具</p>
+</footer>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

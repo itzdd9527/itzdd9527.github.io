@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.vjoker.blog","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="V&#39;s Joker Blog">
+<meta property="og:url" content="https://www.vjoker.blog/2025/01/06/%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8%E8%AF%B4%E6%98%8E/index.html">
+<meta property="og:site_name" content="V&#39;s Joker">
+<meta property="og:description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-06T07:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-02T17:22:09.772Z">
+<meta property="article:author" content="V.Joker">
+<meta property="article:tag" content="小丑传奇引擎">
+<meta property="article:tag" content="脚本开发">
+<meta property="article:tag" content="游戏脚本">
+<meta property="article:tag" content="NPC脚本">
+<meta property="article:tag" content="入门教程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.vjoker.blog/2025/01/06/%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8%E8%AF%B4%E6%98%8E/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.vjoker.blog/2025/01/06/%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8%E8%AF%B4%E6%98%8E/","path":"2025/01/06/脚本入门说明/","title":"小丑传奇引擎脚本入门说明"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>小丑传奇引擎脚本入门说明 | V's Joker</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="V's Joker" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">V's Joker</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember remember the chaos and smile</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">脚本入门说明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%85%B3%E4%BA%8ENPC%E5%86%85%E5%AE%B9%E8%B0%83%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">一、关于NPC内容调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81NPC%E5%9F%BA%E7%A1%80%E5%86%99%E6%B3%95-TXT"><span class="nav-number">1.2.</span> <span class="nav-text">二、NPC基础写法(TXT)</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="V.Joker"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">V.Joker</p>
+  <div class="site-description" itemprop="description">在混沌中寻找真相，在黑暗里绽放微笑</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/itzdd9527" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;itzdd9527" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8%E8%AF%B4%E6%98%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="小丑传奇引擎脚本入门说明 | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          小丑传奇引擎脚本入门说明
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-06 15:00:00" itemprop="dateCreated datePublished" datetime="2025-01-06T15:00:00+08:00">2025-01-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-03 01:22:09" itemprop="dateModified" datetime="2025-08-03T01:22:09+08:00">2025-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="脚本入门说明"><a href="#脚本入门说明" class="headerlink" title="脚本入门说明"></a>脚本入门说明</h1><h2 id="一、关于NPC内容调用"><a href="#一、关于NPC内容调用" class="headerlink" title="一、关于NPC内容调用"></a>一、关于NPC内容调用</h2><p>引擎目前脚本支持两种写法(lua写法和TXT写法)</p>
+<p>lua脚本路径：Database\System\lua\Npc\NpcFace</p>
+<p>TXT脚本路径：Database\System\Envir\NPCs</p>
+<hr>
+<p>调用写法目录：Database\System\Npc数据\守卫数据</p>
+<p><strong>例：lua写法调用</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;守卫编号&quot;</span><span class="punctuation">:</span> <span class="number">874</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;守卫等级&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;守卫名字&quot;</span><span class="punctuation">:</span> <span class="string">&quot;钱多多01&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;触发lua&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>例：TXT写法调用</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;守卫编号&quot;</span><span class="punctuation">:</span> <span class="number">874</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;守卫等级&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;守卫名字&quot;</span><span class="punctuation">:</span> <span class="string">&quot;钱多多01&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="二、NPC基础写法-TXT"><a href="#二、NPC基础写法-TXT" class="headerlink" title="二、NPC基础写法(TXT)"></a>二、NPC基础写法(TXT)</h2><hr>
+<p><strong>例：输出对话框</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">level &lt; 10</span><br><span class="line">#SAY</span><br><span class="line">你的等级小于10级！</span><br><span class="line">#ELSESAY</span><br><span class="line">你的等级不小于10级！</span><br></pre></td></tr></table></figure>
+
+<p><strong>例：<BR> 对话框换行</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">level &lt; 10</span><br><span class="line">#SAY</span><br><span class="line">你的等级小于10级！&lt;BR&gt;先去升升级吧！</span><br><span class="line">#ELSESAY</span><br><span class="line">你的等级不小于10级！</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>例：执行功能</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#IF</span><br><span class="line">level &lt; 10</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你当前等级小于10级&quot; FALSE</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;你当前等级不小于10级&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>例：对话框按钮执行脚本</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">你好，有什么可以帮你？&lt;#SO:1&gt;我要金币&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveGold 100</span><br><span class="line">TopMessage &quot;你获得100金币&quot; FALSE</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;#SO:1&gt;按钮名字&lt;#SO/&gt;</code> - <code>&lt;#SO:1&gt;</code>数字1代表按钮的触发标签，以<code>&lt;#SO/&gt;</code>结尾</p>
+<hr>
+<p><strong>例：多级跳转界面</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">你好，有什么可以帮你？&lt;#SO:1&gt;我要金币&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">请问我为什么要给你金币？&lt;#SO:1&gt;因为我长得帅&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1_1]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">长得帅就可以为所欲为？&lt;#SO:1&gt;求求你给我点吧&lt;#SO/&gt;&lt;#SO:2&gt;不给就算了&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1_1_1]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveGold 100</span><br><span class="line">TopMessage &quot;好吧，我给你100金币吧&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">[@1_1_2]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;没爱了，不强求了&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
+
+<p>如果使用按钮跳转到下一个界面时，触发处就得每一级多加_加当前数字</p>
+<hr>
+<p><strong>例：多条件判断中断</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#IF</span><br><span class="line">level &gt; 10</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你当前等级大于10级&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">level &gt; 15</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你当前等级大于15级&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
+
+<p>这样第一个条件满足后就不执行后面的判断了</p>
+<hr>
+<p><strong>例：NOT取反判断</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#IF</span><br><span class="line">NOT level = 15</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你的等级不等于15级&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>例：OR多条件判断</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#OR</span><br><span class="line">level &gt; 10</span><br><span class="line">CheckClass 战士</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你的等级大于10级或你职业是战士&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
+
+<p>这样上面两个条件满足其中一个就会执行后面的语句</p>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B0%8F%E4%B8%91%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" rel="tag"># 小丑传奇引擎</a>
+              <a href="/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/" rel="tag"># 脚本开发</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E8%84%9A%E6%9C%AC/" rel="tag"># 游戏脚本</a>
+              <a href="/tags/NPC%E8%84%9A%E6%9C%AC/" rel="tag"># NPC脚本</a>
+              <a href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" rel="tag"># 入门教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/01/06/iconiq-ai-report-2025-review/" rel="prev" title="《ICONIQ 2025年人工智能现状报告：构建者的剧本》：为AI时代的擘画者献上的深度启示">
+                  <i class="fa fa-angle-left"></i> 《ICONIQ 2025年人工智能现状报告：构建者的剧本》：为AI时代的擘画者献上的深度启示
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/01/06/legend-script-tutorial-01-basic/" rel="next" title="小丑传奇引擎脚本教程（一）：入门基础与环境配置">
+                  小丑传奇引擎脚本教程（一）：入门基础与环境配置 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">V.Joker</span>
+  </div><footer class="custom-footer">
+    <p>微笑是混乱的最佳面具</p>
+</footer>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
