@@ -14,7 +14,7 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.vjoker.blog","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
@@ -176,18 +176,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-count">107</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -215,6 +215,842 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/06/01/hexo-next-setup-chapter3/" class="post-title-link" itemprop="url">从零开始搭建 Hexo + NexT 个人博客（第三章：配置进阶）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-01 21:30:00" itemprop="dateCreated datePublished" datetime="2025-06-01T21:30:00+08:00">2025-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/chaos-theory/" itemprop="url" rel="index"><span itemprop="name">混沌理论</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="🎪-第三章：配置进阶-让舞台更加精彩"><a href="#🎪-第三章：配置进阶-让舞台更加精彩" class="headerlink" title="🎪 第三章：配置进阶 - 让舞台更加精彩"></a>🎪 第三章：配置进阶 - 让舞台更加精彩</h1><blockquote>
+<p>“真正的艺术在于细节，真正的混沌在于精确的不确定性” - 现在让我们为舞台添加更多互动元素和高级功能。</p>
+</blockquote>
+<p>在前两章中，我们搭建了博客并配置了基本功能。现在是时候让这个舞台变得更加生动，让访客能够真正参与到这场假面舞会中来。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/06/01/hexo-next-setup-chapter3/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/06/01/hexo-next-setup-chapter2/" class="post-title-link" itemprop="url">从零开始搭建 Hexo + NexT 个人博客（第二章：博客配置）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-01 21:15:00" itemprop="dateCreated datePublished" datetime="2025-06-01T21:15:00+08:00">2025-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/chaos-theory/" itemprop="url" rel="index"><span itemprop="name">混沌理论</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="🎭-第二章：博客配置-为面具注入灵魂"><a href="#🎭-第二章：博客配置-为面具注入灵魂" class="headerlink" title="🎭 第二章：博客配置 - 为面具注入灵魂"></a>🎭 第二章：博客配置 - 为面具注入灵魂</h1><blockquote>
+<p>“每一个面具背后都有一个故事，每一个配置背后都有一个灵魂” - 现在是时候为您的数字面具注入独特的个性了。</p>
+</blockquote>
+<p>在第一章中，我们搭建了博客的基础架构。现在，让我们为这个舞台添加戏剧性的元素，让”V’s Joker”的个性在每一个配置中闪闪发光。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/06/01/hexo-next-setup-chapter2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/06/01/hexo-next-setup-chapter1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/06/01/hexo-next-setup-chapter1/" class="post-title-link" itemprop="url">从零开始搭建 Hexo + NexT 个人博客（第一章：博客搭建）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-01 21:00:00" itemprop="dateCreated datePublished" datetime="2025-06-01T21:00:00+08:00">2025-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/chaos-theory/" itemprop="url" rel="index"><span itemprop="name">混沌理论</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="🎭-第一章：博客搭建-面具后的数字世界"><a href="#🎭-第一章：博客搭建-面具后的数字世界" class="headerlink" title="🎭 第一章：博客搭建 - 面具后的数字世界"></a>🎭 第一章：博客搭建 - 面具后的数字世界</h1><blockquote>
+<p>“记住，记住，混沌与微笑” - 在这个数字化的假面舞会中，我们将创造一个属于小丑与V字面具的舞台。</p>
+</blockquote>
+<p>欢迎来到”V’s Joker”博客搭建系列的第一章。在这里，我们将从零开始，为您的数字面具搭建一个完美的舞台。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/06/01/hexo-next-setup-chapter1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-06-operation-commands/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/06/legend-script-tutorial-06-operation-commands/" class="post-title-link" itemprop="url">小丑传奇引擎脚本教程（六）：功能操作命令详解</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-06 17:30:00" itemprop="dateCreated datePublished" datetime="2025-01-06T17:30:00+08:00">2025-01-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="小丑传奇引擎脚本教程（六）：功能操作命令详解"><a href="#小丑传奇引擎脚本教程（六）：功能操作命令详解" class="headerlink" title="小丑传奇引擎脚本教程（六）：功能操作命令详解"></a>小丑传奇引擎脚本教程（六）：功能操作命令详解</h1><blockquote>
+<p>“操作命令是脚本的执行力，掌握它们让你的创意变为现实！”</p>
+</blockquote>
+<p>在前面的教程中，我们学习了检测命令来判断各种条件。本篇将深入介绍小丑传奇引擎中各种功能操作命令的使用方法，这些命令是实现具体游戏功能的核心工具。通过掌握这些操作命令，你可以创建出功能丰富、交互完善的游戏系统。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/06/legend-script-tutorial-06-operation-commands/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-05-detection-commands/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/06/legend-script-tutorial-05-detection-commands/" class="post-title-link" itemprop="url">小丑传奇引擎脚本教程（五）：脚本检测命令完全指南</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-06 17:00:00" itemprop="dateCreated datePublished" datetime="2025-01-06T17:00:00+08:00">2025-01-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="小丑传奇引擎脚本教程（五）：脚本检测命令完全指南"><a href="#小丑传奇引擎脚本教程（五）：脚本检测命令完全指南" class="headerlink" title="小丑传奇引擎脚本教程（五）：脚本检测命令完全指南"></a>小丑传奇引擎脚本教程（五）：脚本检测命令完全指南</h1><blockquote>
+<p>“精准的检测是智能脚本的基础，掌握检测命令让你的脚本更加灵活！”</p>
+</blockquote>
+<p>在前面的教程中，我们学习了脚本开发的基础知识。本篇将深入介绍小丑传奇引擎中各种检测命令的使用方法，这些命令是实现复杂逻辑判断和条件控制的核心工具。通过掌握这些检测命令，你可以创建出更加智能和精准的游戏脚本。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/06/legend-script-tutorial-05-detection-commands/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-04-advanced/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/06/legend-script-tutorial-04-advanced/" class="post-title-link" itemprop="url">小丑传奇引擎脚本教程（四）：实战案例与高级技巧</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-06 16:30:00" itemprop="dateCreated datePublished" datetime="2025-01-06T16:30:00+08:00">2025-01-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="小丑传奇引擎脚本教程（四）：实战案例与高级技巧"><a href="#小丑传奇引擎脚本教程（四）：实战案例与高级技巧" class="headerlink" title="小丑传奇引擎脚本教程（四）：实战案例与高级技巧"></a>小丑传奇引擎脚本教程（四）：实战案例与高级技巧</h1><blockquote>
+<p>“理论指导实践，实践验证理论。让我们用代码构建一个完整的游戏世界！”</p>
+</blockquote>
+<p>经过前三篇教程的学习，我们已经掌握了脚本开发的基础知识、变量系统和触发机制。本篇作为系列的终章，将通过完整的实战案例，展示如何将所学知识融会贯通，开发出功能完善、逻辑严密的游戏系统。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/06/legend-script-tutorial-04-advanced/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/legend-script-case-study-mount-title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/06/legend-script-case-study-mount-title/" class="post-title-link" itemprop="url">小丑传奇引擎实战案例分析：坐骑与称号系统脚本深度解析</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-06 16:00:00" itemprop="dateCreated datePublished" datetime="2025-01-06T16:00:00+08:00">2025-01-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B/" itemprop="url" rel="index"><span itemprop="name">实战案例</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="小丑传奇引擎实战案例：坐骑与称号系统脚本使用指南"><a href="#小丑传奇引擎实战案例：坐骑与称号系统脚本使用指南" class="headerlink" title="小丑传奇引擎实战案例：坐骑与称号系统脚本使用指南"></a>小丑传奇引擎实战案例：坐骑与称号系统脚本使用指南</h1><p>本文提供可直接使用的坐骑和称号系统脚本，包含完整的NPC脚本和物品使用脚本，新手可以直接复制使用。</p>
+<h2 id="📁-脚本文件说明"><a href="#📁-脚本文件说明" class="headerlink" title="📁 脚本文件说明"></a>📁 脚本文件说明</h2><h3 id="文件1：称号坐骑-txt"><a href="#文件1：称号坐骑-txt" class="headerlink" title="文件1：称号坐骑.txt"></a>文件1：称号坐骑.txt</h3><p><strong>用途</strong>：物品使用触发脚本<br><strong>位置</strong>：Database\System\Envir\NPCs\称号坐骑.txt<br><strong>功能</strong>：玩家右键使用称号道具或坐骑道具时自动激活对应功能</p>
+<h3 id="文件2：6311-活动大使01-txt"><a href="#文件2：6311-活动大使01-txt" class="headerlink" title="文件2：6311-活动大使01.txt"></a>文件2：6311-活动大使01.txt</h3><p><strong>用途</strong>：NPC对话脚本<br><strong>位置</strong>：Database\System\Envir\NPCs\6311-活动大使01.txt<br><strong>功能</strong>：提供自动拾取功能的开启和关闭服务</p>
+<h2 id="🎖️-称号系统脚本"><a href="#🎖️-称号系统脚本" class="headerlink" title="🎖️ 称号系统脚本"></a>🎖️ 称号系统脚本</h2><h3 id="脚本模板（可直接复制使用）"><a href="#脚本模板（可直接复制使用）" class="headerlink" title="脚本模板（可直接复制使用）"></a>脚本模板（可直接复制使用）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">; 伤不起称号 - 物品ID：1410036，称号ID：11</span><br><span class="line">[@_USEITEM(1410036)]  </span><br><span class="line">#IF </span><br><span class="line">CheckItemidx 1410036 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410036 1</span><br><span class="line">GiveTitle 11 </span><br><span class="line">Break</span><br></pre></td></tr></table></figure>
+
+<h3 id="脚本命令详解"><a href="#脚本命令详解" class="headerlink" title="脚本命令详解"></a>脚本命令详解</h3><ul>
+<li><strong>[@_USEITEM(1410036)]</strong> - 物品使用触发器，当玩家右键使用物品ID为1410036的道具时执行</li>
+<li><strong>#IF</strong> - 条件判断开始标记</li>
+<li><strong>CheckItemidx 1410036 1</strong> - 检查玩家背包是否有物品ID为1410036的道具至少1个</li>
+<li><strong>#ACT</strong> - 动作执行开始标记</li>
+<li><strong>TakeItemIdx 1410036 1</strong> - 从玩家背包扣除1个物品ID为1410036的道具</li>
+<li><strong>GiveTitle 11</strong> - 给予玩家称号ID为11的称号</li>
+<li><strong>Break</strong> - 停止脚本执行，防止继续处理其他脚本</li>
+</ul>
+<h3 id="完整称号脚本列表（直接复制使用）"><a href="#完整称号脚本列表（直接复制使用）" class="headerlink" title="完整称号脚本列表（直接复制使用）"></a>完整称号脚本列表（直接复制使用）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line">; 伤不起 - 物品ID：1410036，称号ID：11</span><br><span class="line">[@_USEITEM(1410036)]  </span><br><span class="line">#IF </span><br><span class="line">CheckItemidx 1410036 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410036 1</span><br><span class="line">GiveTitle 11 </span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 玛法功臣 - 物品ID：1410093，称号ID：93</span><br><span class="line">[@_USEITEM(1410093)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410093 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410093 1</span><br><span class="line">GiveTitle 93</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 修行不缀 - 物品ID：1410094，称号ID：94</span><br><span class="line">[@_USEITEM(1410094)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410094 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410094 1</span><br><span class="line">GiveTitle 94</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 17173称号 - 物品ID：1410095，称号ID：95</span><br><span class="line">[@_USEITEM(1410095)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410095 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410095 1</span><br><span class="line">GiveTitle 95</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 擂台小将 - 物品ID：1410096，称号ID：96</span><br><span class="line">[@_USEITEM(1410096)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410096 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410096 1</span><br><span class="line">GiveTitle 96</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 擂台霸主 - 物品ID：1410097，称号ID：97</span><br><span class="line">[@_USEITEM(1410097)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410097 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410097 1</span><br><span class="line">GiveTitle 97</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 征战玛法 - 物品ID：1410103，称号ID：103</span><br><span class="line">[@_USEITEM(1410103)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410103 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410103 1</span><br><span class="line">GiveTitle 103</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 武道圣心 - 物品ID：1410122，称号ID：128</span><br><span class="line">[@_USEITEM(1410122)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410122 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410122 1</span><br><span class="line">GiveTitle 128</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 武道至尊 - 物品ID：1410123，称号ID：129</span><br><span class="line">[@_USEITEM(1410123)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410123 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410123 1</span><br><span class="line">GiveTitle 129</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 周年庆称号 - 物品ID：1410124，称号ID：130</span><br><span class="line">[@_USEITEM(1410124)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 1410124 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 1410124 1</span><br><span class="line">GiveTitle 130</span><br><span class="line">Break</span><br></pre></td></tr></table></figure>
+
+<h2 id="🐎-坐骑系统脚本"><a href="#🐎-坐骑系统脚本" class="headerlink" title="🐎 坐骑系统脚本"></a>🐎 坐骑系统脚本</h2><h3 id="脚本模板（可直接复制使用）-1"><a href="#脚本模板（可直接复制使用）-1" class="headerlink" title="脚本模板（可直接复制使用）"></a>脚本模板（可直接复制使用）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">; 白泽·幼坐骑 - 物品ID：39101，坐骑ID：1</span><br><span class="line">[@_USEITEM(39101)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39101 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39101 1</span><br><span class="line">GiveMount 1</span><br><span class="line">Break</span><br></pre></td></tr></table></figure>
+
+<h3 id="坐骑脚本命令详解"><a href="#坐骑脚本命令详解" class="headerlink" title="坐骑脚本命令详解"></a>坐骑脚本命令详解</h3><ul>
+<li><strong>[@_USEITEM(39101)]</strong> - 物品使用触发器，当玩家右键使用物品ID为39101的坐骑道具时执行</li>
+<li><strong>#IF</strong> - 条件判断开始标记</li>
+<li><strong>CheckItemidx 39101 1</strong> - 检查玩家背包是否有物品ID为39101的道具至少1个</li>
+<li><strong>#ACT</strong> - 动作执行开始标记</li>
+<li><strong>TakeItemIdx 39101 1</strong> - 从玩家背包扣除1个物品ID为39101的道具</li>
+<li><strong>GiveMount 1</strong> - 给予玩家坐骑ID为1的坐骑</li>
+<li><strong>Break</strong> - 停止脚本执行，防止继续处理其他脚本</li>
+</ul>
+<h3 id="完整坐骑脚本列表（直接复制使用）"><a href="#完整坐骑脚本列表（直接复制使用）" class="headerlink" title="完整坐骑脚本列表（直接复制使用）"></a>完整坐骑脚本列表（直接复制使用）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br></pre></td><td class="code"><pre><span class="line">; 白泽·幼 - 物品ID：39101，坐骑ID：1</span><br><span class="line">[@_USEITEM(39101)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39101 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39101 1</span><br><span class="line">GiveMount 1</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 追风 - 物品ID：39102，坐骑ID：2</span><br><span class="line">[@_USEITEM(39102)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39102 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39102 1</span><br><span class="line">GiveMount 2</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 玛法之魂 - 物品ID：39103，坐骑ID：3</span><br><span class="line">[@_USEITEM(39103)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39103 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39103 1</span><br><span class="line">GiveMount 3</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 驯鹿 - 物品ID：39104，坐骑ID：4</span><br><span class="line">[@_USEITEM(39104)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39104 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39104 1</span><br><span class="line">GiveMount 4</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 琉璃鹿 - 物品ID：39105，坐骑ID：5</span><br><span class="line">[@_USEITEM(39105)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39105 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39105 1</span><br><span class="line">GiveMount 5</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 剑齿虎 - 物品ID：39106，坐骑ID：6</span><br><span class="line">[@_USEITEM(39106)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39106 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39106 1</span><br><span class="line">GiveMount 6</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 奔雷兽 - 物品ID：39107，坐骑ID：7</span><br><span class="line">[@_USEITEM(39107)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39107 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39107 1</span><br><span class="line">GiveMount 7</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 白泽 - 物品ID：39108，坐骑ID：8</span><br><span class="line">[@_USEITEM(39108)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39108 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39108 1</span><br><span class="line">GiveMount 8</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 踏风隼 - 物品ID：39109，坐骑ID：9</span><br><span class="line">[@_USEITEM(39109)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39109 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39109 1</span><br><span class="line">GiveMount 9</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 覆甲獠牙 - 物品ID：39112，坐骑ID：10</span><br><span class="line">[@_USEITEM(39112)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39112 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39112 1</span><br><span class="line">GiveMount 10</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 龙髯 - 物品ID：39111，坐骑ID：11</span><br><span class="line">[@_USEITEM(39111)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39111 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39111 1</span><br><span class="line">GiveMount 11</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 血牙 - 物品ID：39119，坐骑ID：12</span><br><span class="line">[@_USEITEM(39119)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39119 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39119 1</span><br><span class="line">GiveMount 12</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 长牙 - 物品ID：39113，坐骑ID：13</span><br><span class="line">[@_USEITEM(39113)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39113 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39113 1</span><br><span class="line">GiveMount 13</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 偃甲灵鼠 - 物品ID：39114，坐骑ID：14</span><br><span class="line">[@_USEITEM(39114)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39114 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39114 1</span><br><span class="line">GiveMount 14</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 机关木鼠 - 物品ID：39115，坐骑ID：15</span><br><span class="line">[@_USEITEM(39115)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39115 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39115 1</span><br><span class="line">GiveMount 15</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 熔火龙蜥 - 物品ID：39116，坐骑ID：16</span><br><span class="line">[@_USEITEM(39116)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39116 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39116 1</span><br><span class="line">GiveMount 16</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 牛魔 - 物品ID：39117，坐骑ID：18</span><br><span class="line">[@_USEITEM(39117)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39117 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39117 1</span><br><span class="line">GiveMount 18</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 三尾 - 物品ID：39120，坐骑ID：19</span><br><span class="line">[@_USEITEM(39120)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39120 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39120 1</span><br><span class="line">GiveMount 19</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 玄虎 - 物品ID：39121，坐骑ID：20</span><br><span class="line">[@_USEITEM(39121)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39121 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39121 1</span><br><span class="line">GiveMount 20</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 踏云 - 物品ID：39122，坐骑ID：21</span><br><span class="line">[@_USEITEM(39122)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39122 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39122 1</span><br><span class="line">GiveMount 21</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 灵兔 - 物品ID：39123，坐骑ID：22</span><br><span class="line">[@_USEITEM(39123)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39123 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39123 1</span><br><span class="line">GiveMount 22</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 军机魔蝎 - 物品ID：39124，坐骑ID：23</span><br><span class="line">[@_USEITEM(39124)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39124 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39124 1</span><br><span class="line">GiveMount 23</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 利爪 - 物品ID：39125，坐骑ID：24</span><br><span class="line">[@_USEITEM(39125)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39125 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39125 1</span><br><span class="line">GiveMount 24</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 巅峰战熊 - 物品ID：39126，坐骑ID：25</span><br><span class="line">[@_USEITEM(39126)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39126 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39126 1</span><br><span class="line">GiveMount 25</span><br><span class="line">Break</span><br><span class="line"></span><br><span class="line">; 军机戎车 - 物品ID：39127，坐骑ID：26</span><br><span class="line">[@_USEITEM(39127)]</span><br><span class="line">#IF</span><br><span class="line">CheckItemidx 39127 1</span><br><span class="line">#ACT</span><br><span class="line">TakeItemIdx 39127 1</span><br><span class="line">GiveMount 26</span><br><span class="line">Break</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎯-活动大使NPC脚本"><a href="#🎯-活动大使NPC脚本" class="headerlink" title="🎯 活动大使NPC脚本"></a>🎯 活动大使NPC脚本</h2><h3 id="NPC名称：活动大使01"><a href="#NPC名称：活动大使01" class="headerlink" title="NPC名称：活动大使01"></a>NPC名称：活动大使01</h3><p><strong>NPC编号</strong>：6311<br><strong>脚本文件</strong>：6311-活动大使01.txt</p>
+<h3 id="完整NPC脚本（直接复制使用）"><a href="#完整NPC脚本（直接复制使用）" class="headerlink" title="完整NPC脚本（直接复制使用）"></a>完整NPC脚本（直接复制使用）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">#SAY</span><br><span class="line">我是活动大使，可以为你提供各种便民服务。&lt;#SO:1&gt;开启自动拾取&lt;#SO/&gt;&lt;#SO:2&gt;关闭自动拾取&lt;#SO/&gt;&lt;#SO:3&gt;离开&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">CheckCalc &lt;$VIP&gt; &gt;= 1</span><br><span class="line">#ACT</span><br><span class="line">AutoPickCfg 5 3000</span><br><span class="line">LocalMessage &quot;你开启了范围为5的自动拾取功能，3秒执行一次!&quot;</span><br><span class="line">SaveValue &quot;AutoPickLog.txt&quot; &quot;AutoPick&quot; &quot;&lt;$USERNAME&gt;_&lt;$DATE&gt;_&lt;$HOUR&gt;&quot; &quot;玩家&lt;$USERNAME&gt;开启了自动拾取功能,范围:5,间隔:3000毫秒&quot;</span><br><span class="line">BREAK</span><br><span class="line">#ELSESAY</span><br><span class="line">对不起，只有VIP玩家才能使用自动拾取功能！请先开通VIP特权。</span><br><span class="line"></span><br><span class="line">[@2]</span><br><span class="line">#IF</span><br><span class="line">CheckCalc &lt;$VIP&gt; &gt;= 1</span><br><span class="line">#ACT</span><br><span class="line">AutoPickCfg 0 0</span><br><span class="line">LocalMessage &quot;你已关闭自动拾取功能!&quot;</span><br><span class="line">SaveValue &quot;AutoPickLog.txt&quot; &quot;AutoPick&quot; &quot;&lt;$USERNAME&gt;_&lt;$DATE&gt;_&lt;$HOUR&gt;&quot; &quot;玩家&lt;$USERNAME&gt;关闭了自动拾取功能&quot;</span><br><span class="line">BREAK</span><br><span class="line">#ELSESAY</span><br><span class="line">对不起，只有VIP玩家才能操作自动拾取功能！</span><br><span class="line"></span><br><span class="line">[@3]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">CLOSE</span><br></pre></td></tr></table></figure>
+
+<h3 id="NPC脚本命令详解"><a href="#NPC脚本命令详解" class="headerlink" title="NPC脚本命令详解"></a>NPC脚本命令详解</h3><ul>
+<li><strong>[@MAIN]</strong> - NPC主对话入口，玩家点击NPC时执行</li>
+<li><strong>#SAY</strong> - 显示对话内容给玩家</li>
+<li><strong>&lt;#SO:1&gt;开启自动拾取&lt;#SO&#x2F;&gt;</strong> - 创建按钮，点击跳转到[@1]段</li>
+<li><strong>[@1]</strong> - 按钮1的处理段（开启自动拾取）</li>
+<li><strong>CheckCalc &lt;$VIP&gt; &gt;&#x3D; 1</strong> - 检查玩家VIP等级是否大于等于1</li>
+<li><strong>AutoPickCfg 5 3000</strong> - 配置自动拾取：范围5格，间隔3000毫秒</li>
+<li><strong>LocalMessage “文本”</strong> - 向玩家发送本地消息</li>
+<li><strong>SaveValue “文件” “节” “键” “值”</strong> - 保存数据到文件，用于日志记录</li>
+<li><strong>BREAK</strong> - 停止脚本执行</li>
+<li><strong>#ELSESAY</strong> - 条件不满足时显示的对话内容</li>
+<li><strong>CLOSE</strong> - 关闭对话框</li>
+</ul>
+<h2 id="📝-使用说明"><a href="#📝-使用说明" class="headerlink" title="📝 使用说明"></a>📝 使用说明</h2><h3 id="如何使用这些脚本"><a href="#如何使用这些脚本" class="headerlink" title="如何使用这些脚本"></a>如何使用这些脚本</h3><ol>
+<li><strong>复制脚本代码</strong>：直接复制上面的脚本代码到对应的文件中</li>
+<li><strong>修改ID参数</strong>：根据你的游戏需要修改物品ID、称号ID、坐骑ID</li>
+<li><strong>保存文件</strong>：将脚本保存到正确的目录</li>
+<li><strong>重启服务器</strong>：重启游戏服务器使脚本生效</li>
+</ol>
+<h3 id="文件保存位置"><a href="#文件保存位置" class="headerlink" title="文件保存位置"></a>文件保存位置</h3><ul>
+<li><strong>称号坐骑脚本</strong>：<code>Database\System\Envir\NPCs\称号坐骑.txt</code></li>
+<li><strong>NPC脚本</strong>：<code>Database\System\Envir\NPCs\6311-活动大使01.txt</code></li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>确保物品ID在游戏中存在</li>
+<li>称号ID和坐骑ID需要在游戏数据库中配置</li>
+<li>VIP等级检查需要游戏支持VIP系统</li>
+<li>所有脚本都经过实际测试，可以直接使用</li>
+</ul>
+<hr>
+<p><em>本文提供的脚本均来自真实游戏环境，可直接复制使用。如需修改功能，请根据注释说明调整对应参数。</em></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-03-triggers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="V.Joker">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="V's Joker">
+      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | V's Joker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/06/legend-script-tutorial-03-triggers/" class="post-title-link" itemprop="url">小丑传奇引擎脚本教程（三）：触发机制与事件处理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-06 16:00:00" itemprop="dateCreated datePublished" datetime="2025-01-06T16:00:00+08:00">2025-01-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="小丑传奇引擎脚本教程（三）：触发机制与事件处理"><a href="#小丑传奇引擎脚本教程（三）：触发机制与事件处理" class="headerlink" title="小丑传奇引擎脚本教程（三）：触发机制与事件处理"></a>小丑传奇引擎脚本教程（三）：触发机制与事件处理</h1><blockquote>
+<p>“触发器是游戏世界的神经系统，让你的游戏世界充满生机与活力！”</p>
+</blockquote>
+<p>在前两篇教程中，我们学习了脚本基础和变量系统。本篇将深入探讨小丑传奇引擎的触发机制，这是实现自动化游戏逻辑的核心技术。通过掌握各种触发器，你可以创建出响应玩家行为、自动执行任务、实时监控游戏状态的智能系统。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/06/legend-script-tutorial-03-triggers/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -260,7 +1096,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-03 01:34:12" itemprop="dateModified" datetime="2025-08-03T01:34:12+08:00">2025-08-03</time>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -359,7 +1195,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-03 01:34:12" itemprop="dateModified" datetime="2025-08-03T01:34:12+08:00">2025-08-03</time>
+      <time title="修改时间：2025-08-07 23:03:17" itemprop="dateModified" datetime="2025-08-07T23:03:17+08:00">2025-08-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -433,955 +1269,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/%E8%84%9A%E6%9C%AC%E5%8F%98%E9%87%8F%E8%BF%90%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="V.Joker">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="V's Joker">
-      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | V's Joker">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/06/%E8%84%9A%E6%9C%AC%E5%8F%98%E9%87%8F%E8%BF%90%E7%94%A8/" class="post-title-link" itemprop="url">小丑传奇引擎脚本变量运用指南</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-01-06 15:02:00" itemprop="dateCreated datePublished" datetime="2025-01-06T15:02:00+08:00">2025-01-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-03 01:34:12" itemprop="dateModified" datetime="2025-08-03T01:34:12+08:00">2025-08-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="脚本变量使用"><a href="#脚本变量使用" class="headerlink" title="脚本变量使用"></a>脚本变量使用</h1><h2 id="常用变量和运算"><a href="#常用变量和运算" class="headerlink" title="常用变量和运算"></a>常用变量和运算</h2><hr>
-<h2 id="游戏常量"><a href="#游戏常量" class="headerlink" title="游戏常量"></a>游戏常量</h2><table>
-<thead>
-<tr>
-<th>变量名称</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&lt;$USERNAME&gt;</code></td>
-<td>角色名称</td>
-</tr>
-<tr>
-<td><code>&lt;$GUILDNAME&gt;</code></td>
-<td>行会名称</td>
-</tr>
-<tr>
-<td><code>&lt;$GUILDLV&gt;</code></td>
-<td>行会等级</td>
-</tr>
-<tr>
-<td><code>&lt;$CLASS&gt;</code></td>
-<td>角色职业</td>
-</tr>
-<tr>
-<td><code>&lt;$LEVEL&gt;</code></td>
-<td>当前等级</td>
-</tr>
-<tr>
-<td><code>&lt;$HP&gt;</code></td>
-<td>当前生命值</td>
-</tr>
-<tr>
-<td><code>&lt;$MP&gt;</code></td>
-<td>当前魔法值</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXHP&gt;</code></td>
-<td>生命值上限</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXMP&gt;</code></td>
-<td>魔法值上限</td>
-</tr>
-<tr>
-<td><code>&lt;$PKPOINT&gt;</code></td>
-<td>当前PK值</td>
-</tr>
-<tr>
-<td><code>&lt;$GOLD&gt;</code></td>
-<td>金币数量</td>
-</tr>
-<tr>
-<td><code>&lt;$GAMEGOLD&gt;</code></td>
-<td>元宝数量</td>
-</tr>
-<tr>
-<td><code>&lt;$SILVER&gt;</code></td>
-<td>银币数量</td>
-</tr>
-<tr>
-<td><code>&lt;$PAYMENTDAY&gt;</code></td>
-<td>今日充值金额 24点后清零</td>
-</tr>
-<tr>
-<td><code>&lt;$PAYMENT&gt;</code></td>
-<td>累计充值金额</td>
-</tr>
-<tr>
-<td><code>&lt;$ACCOUNT&gt;</code></td>
-<td>人物帐号</td>
-</tr>
-<tr>
-<td><code>&lt;$PCODE&gt;</code></td>
-<td>推广码</td>
-</tr>
-<tr>
-<td><code>&lt;$DC&gt;</code></td>
-<td>最小攻击</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXDC&gt;</code></td>
-<td>最大攻击</td>
-</tr>
-<tr>
-<td><code>&lt;$MC&gt;</code></td>
-<td>最小魔法</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXMC&gt;</code></td>
-<td>最大魔法</td>
-</tr>
-<tr>
-<td><code>&lt;$SC&gt;</code></td>
-<td>最小道术</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXSC&gt;</code></td>
-<td>最大道术</td>
-</tr>
-<tr>
-<td><code>&lt;$ASC&gt;</code></td>
-<td>最小刺术</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXASC&gt;</code></td>
-<td>最大刺术</td>
-</tr>
-<tr>
-<td><code>&lt;$ARC&gt;</code></td>
-<td>最小弓术</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXARC&gt;</code></td>
-<td>最大弓术</td>
-</tr>
-<tr>
-<td><code>&lt;$AC&gt;</code></td>
-<td>最小防御</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXAC&gt;</code></td>
-<td>最大防御</td>
-</tr>
-<tr>
-<td><code>&lt;$MAC&gt;</code></td>
-<td>最小魔防</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXMAC&gt;</code></td>
-<td>最大魔防</td>
-</tr>
-<tr>
-<td><code>&lt;$LUCK&gt;</code></td>
-<td>幸运等级</td>
-</tr>
-<tr>
-<td><code>&lt;$HIT&gt;</code></td>
-<td>物理准确</td>
-</tr>
-<tr>
-<td><code>&lt;$HITMC&gt;</code></td>
-<td>魔法命中</td>
-</tr>
-<tr>
-<td><code>&lt;$SPD&gt;</code></td>
-<td>物理敏捷</td>
-</tr>
-<tr>
-<td><code>&lt;$BLASTATT&gt;</code></td>
-<td>暴击概率</td>
-</tr>
-<tr>
-<td><code>&lt;$BLASTATTDAM&gt;</code></td>
-<td>暴击伤害</td>
-</tr>
-<tr>
-<td><code>&lt;$BLASTATTDEC&gt;</code></td>
-<td>减暴击</td>
-</tr>
-<tr>
-<td><code>&lt;$BLASTATTDAMDEC&gt;</code></td>
-<td>减暴伤</td>
-</tr>
-<tr>
-<td><code>&lt;$ANTIMAGIC&gt;</code></td>
-<td>魔法闪避</td>
-</tr>
-<tr>
-<td><code>&lt;$ANTIPOISON&gt;</code></td>
-<td>中毒躲避</td>
-</tr>
-<tr>
-<td><code>&lt;$ATTACTSPEED&gt;</code></td>
-<td>攻击速度</td>
-</tr>
-<tr>
-<td><code>&lt;$HOLYDM&gt;</code></td>
-<td>最小圣伤</td>
-</tr>
-<tr>
-<td><code>&lt;$MAXHOLYDAM&gt;</code></td>
-<td>最大圣伤</td>
-</tr>
-<tr>
-<td><code>&lt;$BREAKAC&gt;</code></td>
-<td>破物防</td>
-</tr>
-<tr>
-<td><code>&lt;$BREAKMAC&gt;</code></td>
-<td>破魔防</td>
-</tr>
-<tr>
-<td><code>&lt;$DCHITHP&gt;</code></td>
-<td>物理击回</td>
-</tr>
-<tr>
-<td><code>&lt;$MCHITHP&gt;</code></td>
-<td>魔法击回</td>
-</tr>
-<tr>
-<td><code>&lt;$POWERRATE&gt;</code></td>
-<td>伤害加成</td>
-</tr>
-<tr>
-<td><code>&lt;$POWER&gt;</code></td>
-<td>当前战力</td>
-</tr>
-<tr>
-<td><code>&lt;$DAYPOINT&gt;</code></td>
-<td>日程进度</td>
-</tr>
-<tr>
-<td><code>&lt;$BAGSIZE&gt;</code></td>
-<td>背包大小</td>
-</tr>
-<tr>
-<td><code>&lt;$DOUBLEEXP&gt;</code></td>
-<td>双倍经验</td>
-</tr>
-<tr>
-<td><code>&lt;$SCRIPTDROPRATE&gt;</code></td>
-<td>脚本爆率倍数</td>
-</tr>
-<tr>
-<td><code>&lt;$EXP&gt;</code></td>
-<td>当前经验</td>
-</tr>
-<tr>
-<td><code>&lt;$MAPMONCNT()&gt;</code></td>
-<td>地图怪物数量(地图编号)</td>
-</tr>
-<tr>
-<td><code>&lt;$MONCNT()&gt;</code></td>
-<td>地图指定怪物数量(地图编号,怪物名字)</td>
-</tr>
-<tr>
-<td><code>&lt;$MAP&gt;</code></td>
-<td>地图编号</td>
-</tr>
-<tr>
-<td><code>&lt;$X_COORD&gt;</code></td>
-<td>当前坐标X</td>
-</tr>
-<tr>
-<td><code>&lt;$Y_COORD&gt;</code></td>
-<td>当前坐标Y</td>
-</tr>
-<tr>
-<td><code>&lt;$LASTKILLMON&gt;</code></td>
-<td>最后杀死的怪物编号</td>
-</tr>
-<tr>
-<td><code>&lt;$LASTKILLMEPLAYNAME&gt;</code></td>
-<td>最后杀死自己的玩家名字</td>
-</tr>
-<tr>
-<td><code>&lt;$LASTKILLPLAYNAME&gt;</code></td>
-<td>最后杀死的玩家名字</td>
-</tr>
-<tr>
-<td><code>&lt;$ITEMNAME()&gt;</code></td>
-<td>物品名字(物品id)</td>
-</tr>
-<tr>
-<td><code>&lt;$ITEMVALUE()&gt;</code></td>
-<td>获取物品指定属性</td>
-</tr>
-<tr>
-<td><code>&lt;$VIP&gt;</code></td>
-<td>本期特权</td>
-</tr>
-<tr>
-<td><code>&lt;$MARFADAY&gt;</code></td>
-<td>玛法特权剩余天数</td>
-</tr>
-<tr>
-<td><code>&lt;$MARFADAY()&gt;</code></td>
-<td>剩余玛法特权(特权编号)</td>
-</tr>
-<tr>
-<td><code>&lt;$TITLE&gt;</code></td>
-<td>当前称号</td>
-</tr>
-<tr>
-<td><code>&lt;$PPOINT&gt;</code></td>
-<td>推广点</td>
-</tr>
-<tr>
-<td><code>&lt;$TALENTLV()&gt;</code></td>
-<td>天赋等级(天赋编号)</td>
-</tr>
-<tr>
-<td><code>&lt;$PHYSIQUE&gt;</code></td>
-<td>开通龙卫觉醒,开通返回1,否则0</td>
-</tr>
-<tr>
-<td><code>&lt;$AWAKE&gt;</code></td>
-<td>开启觉醒面板,开通返回1,否则0</td>
-</tr>
-<tr>
-<td><code>&lt;$CURDATE&gt;</code></td>
-<td>当前时间日期部分,时间为00:00:00</td>
-</tr>
-<tr>
-<td><code>&lt;$UTCNOW&gt;</code></td>
-<td>当前时间10位UTC时间戳</td>
-</tr>
-<tr>
-<td><code>&lt;$USERCOUNT&gt;</code></td>
-<td>玩家数量</td>
-</tr>
-<tr>
-<td><code>&lt;$VERSION&gt;</code></td>
-<td>开区节点</td>
-</tr>
-<tr>
-<td><code>&lt;$DATE&gt;</code></td>
-<td>当前时间日期部分</td>
-</tr>
-<tr>
-<td><code>&lt;$YEAR&gt;</code></td>
-<td>年份</td>
-</tr>
-<tr>
-<td><code>&lt;$MONTH&gt;</code></td>
-<td>月份</td>
-</tr>
-<tr>
-<td><code>&lt;$WEEK&gt;</code></td>
-<td>星期几</td>
-</tr>
-<tr>
-<td><code>&lt;$DAY&gt;</code></td>
-<td>日</td>
-</tr>
-<tr>
-<td><code>&lt;$HOUR&gt;</code></td>
-<td>小时</td>
-</tr>
-<tr>
-<td><code>&lt;$MINUTE&gt;</code></td>
-<td>分钟</td>
-</tr>
-<tr>
-<td><code>&lt;$SECOND&gt;</code></td>
-<td>秒</td>
-</tr>
-<tr>
-<td><code>&lt;$VARSORTNAME()&gt;</code></td>
-<td>变量按名排序(1,U变量,名次)</td>
-</tr>
-<tr>
-<td><code>&lt;$VARSORTVALUE()&gt;</code></td>
-<td>变量按值排序(1,U变量,名次)</td>
-</tr>
-<tr>
-<td><code>&lt;$VARSORTIDX()&gt;</code></td>
-<td>变量按IDX排序(1,U变量);你的U变量当前排名</td>
-</tr>
-<tr>
-<td><code>&lt;$SPECIALREPAIRALLCOST&gt;</code></td>
-<td>全身特修费用</td>
-</tr>
-<tr>
-<td><code>&lt;$ItemValue(0,装备位置,装备属性)&gt;</code></td>
-<td>获取身上装备指定属性,装备属性表查看装备属性表</td>
-</tr>
-<tr>
-<td><code>&lt;$CASTLEGUILD&gt;</code></td>
-<td>沙巴克行会变量</td>
-</tr>
-<tr>
-<td><code>&lt;$CASTLELORD&gt;</code></td>
-<td>沙巴克城主变量</td>
-</tr>
-<tr>
-<td><code>&lt;$TITLE&gt;</code></td>
-<td>当前佩戴的称号编号</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="常用脚本变量"><a href="#常用脚本变量" class="headerlink" title="常用脚本变量"></a>常用脚本变量</h2><ul>
-<li><strong>G0-G任意数字</strong> (全局变量，数字型) 可保存。(存放在数据库里，清据数据时清零)</li>
-<li><strong>A0-A任意数字</strong> (全局变量，字符型) 可保存。(存放在数据库里，清据数据时清空)</li>
-<li><strong>N0-N任意数字</strong> (私人变量，数字型) 下线不保存.小退归0.</li>
-<li><strong>S0-S任意数字</strong> (私人变量，字符型) 下线不保存.小退归0.</li>
-<li><strong>U0-U任意数字</strong> (私人变量，数字型) 可保存。（存放在人物数据里面）</li>
-<li><strong>T0-T任意数字</strong> (私人变量，字符型) 可保存。（存放在人物数据里面）</li>
-<li><strong>J0-J任意数字</strong> (私人变量，数字型) 可保存，每天0点自动清零。（存放在人物数据里面）</li>
-<li><strong>Q0-Q任意数字</strong> (私人变量，数字型) 关闭对话框重置为0。</li>
-</ul>
-<p><strong>变量显示格式</strong>：<code>&lt;$STR(G0)&gt;</code>、<code>&lt;$STR(A0)&gt;</code>、<code>&lt;$STR(N0)&gt;</code>…</p>
-<hr>
-<h2 id="变量检测与运算"><a href="#变量检测与运算" class="headerlink" title="变量检测与运算"></a>变量检测与运算</h2><h3 id="检测变量"><a href="#检测变量" class="headerlink" title="检测变量"></a>检测变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckCalc 检测值 检测符(&gt; &lt; == !=) 对比值或字符</span><br></pre></td></tr></table></figure>
-
-<p><strong>比较符号</strong>：</p>
-<ul>
-<li>大于：<code>&gt;</code></li>
-<li>小于：<code>&lt;</code></li>
-<li>等于：<code>==</code></li>
-<li>不等于：<code>!=</code></li>
-</ul>
-<p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">CheckCalc N1 == 100</span><br><span class="line">#SAY</span><br><span class="line">提示：当前N1变量等于100。</span><br><span class="line">#ELSESAY</span><br><span class="line">提示：当前N1变量不等于100。</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="赋值变量"><a href="#赋值变量" class="headerlink" title="赋值变量"></a>赋值变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MOV 变量名 值</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">MOV N1 100</span><br></pre></td></tr></table></figure>
-
-<p>将N1赋值等于100。</p>
-<hr>
-<h3 id="变量运算"><a href="#变量运算" class="headerlink" title="变量运算"></a>变量运算</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Calc 运算符(+ - * /) 运算值</span><br></pre></td></tr></table></figure>
-
-<p><strong>运算符</strong>：</p>
-<ul>
-<li>加：<code>+</code></li>
-<li>减：<code>-</code></li>
-<li>乘：<code>*</code></li>
-<li>除：<code>/</code></li>
-</ul>
-<p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">MOV N1 1</span><br><span class="line">Calc N1 + 1</span><br></pre></td></tr></table></figure>
-
-<p>赋值N1等于1 然后加1结果就会等于2</p>
-<hr>
-<p><em>Copyright © 2019. All rights reserved.</em></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/%E8%84%9A%E6%9C%AC%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="V.Joker">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="V's Joker">
-      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | V's Joker">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/06/%E8%84%9A%E6%9C%AC%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">小丑传奇引擎脚本常用命令详解</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-01-06 15:01:00" itemprop="dateCreated datePublished" datetime="2025-01-06T15:01:00+08:00">2025-01-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-03 01:34:12" itemprop="dateModified" datetime="2025-08-03T01:34:12+08:00">2025-08-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="常用命令写法"><a href="#常用命令写法" class="headerlink" title="常用命令写法"></a>常用命令写法</h1><h2 id="常用脚本命令详解"><a href="#常用脚本命令详解" class="headerlink" title="常用脚本命令详解"></a>常用脚本命令详解</h2><hr>
-<p><code>[@段]</code> - 段用数字表示</p>
-<p><code>goto @段</code> - 跳转到指定段</p>
-<p><code>#say 语句</code> - 语句设定为字符，不用加任何定界符，<code>&lt;BR&gt;</code>为换行符</p>
-<p><code>#act</code> - 执行命令</p>
-<p><code>MOVE 地图ID 坐标X 坐标Y</code> - 移动到这个地图的指定坐标点</p>
-<p><code>BREAK</code> - 中断脚本</p>
-<p><code>&lt;BR&gt;</code> - 对话框内容换行</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/legend-script-tutorial-01-basic/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="V.Joker">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="V's Joker">
-      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | V's Joker">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/06/legend-script-tutorial-01-basic/" class="post-title-link" itemprop="url">小丑传奇引擎脚本教程（一）：入门基础与环境配置</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-01-06 15:00:00" itemprop="dateCreated datePublished" datetime="2025-01-06T15:00:00+08:00">2025-01-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-03 01:34:12" itemprop="dateModified" datetime="2025-08-03T01:34:12+08:00">2025-08-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="小丑传奇引擎脚本教程（一）：入门基础与环境配置"><a href="#小丑传奇引擎脚本教程（一）：入门基础与环境配置" class="headerlink" title="小丑传奇引擎脚本教程（一）：入门基础与环境配置"></a>小丑传奇引擎脚本教程（一）：入门基础与环境配置</h1><blockquote>
-<p>“掌握脚本开发，让你的传奇世界更加精彩！”</p>
-</blockquote>
-<p>欢迎来到小丑传奇引擎脚本开发系列教程！本系列将带你从零开始，逐步掌握传奇引擎脚本的开发技巧。无论你是游戏开发新手还是想要深入了解传奇脚本系统的开发者，这个系列都将为你提供全面而实用的指导。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/01/06/legend-script-tutorial-01-basic/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8%E8%AF%B4%E6%98%8E/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="V.Joker">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="V's Joker">
-      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | V's Joker">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/06/%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8%E8%AF%B4%E6%98%8E/" class="post-title-link" itemprop="url">小丑传奇引擎脚本入门说明</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-01-06 15:00:00" itemprop="dateCreated datePublished" datetime="2025-01-06T15:00:00+08:00">2025-01-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-03 01:34:12" itemprop="dateModified" datetime="2025-08-03T01:34:12+08:00">2025-08-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">游戏开发</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E4%BC%A0%E5%A5%87%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">传奇引擎</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="脚本入门说明"><a href="#脚本入门说明" class="headerlink" title="脚本入门说明"></a>脚本入门说明</h1><h2 id="一、关于NPC内容调用"><a href="#一、关于NPC内容调用" class="headerlink" title="一、关于NPC内容调用"></a>一、关于NPC内容调用</h2><p>引擎目前脚本支持两种写法(lua写法和TXT写法)</p>
-<p>lua脚本路径：Database\System\lua\Npc\NpcFace</p>
-<p>TXT脚本路径：Database\System\Envir\NPCs</p>
-<hr>
-<p>调用写法目录：Database\System\Npc数据\守卫数据</p>
-<p><strong>例：lua写法调用</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;守卫编号&quot;</span><span class="punctuation">:</span> <span class="number">874</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;守卫等级&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;守卫名字&quot;</span><span class="punctuation">:</span> <span class="string">&quot;钱多多01&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;触发lua&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>例：TXT写法调用</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;守卫编号&quot;</span><span class="punctuation">:</span> <span class="number">874</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;守卫等级&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;守卫名字&quot;</span><span class="punctuation">:</span> <span class="string">&quot;钱多多01&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="二、NPC基础写法-TXT"><a href="#二、NPC基础写法-TXT" class="headerlink" title="二、NPC基础写法(TXT)"></a>二、NPC基础写法(TXT)</h2><hr>
-<p><strong>例：输出对话框</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">level &lt; 10</span><br><span class="line">#SAY</span><br><span class="line">你的等级小于10级！</span><br><span class="line">#ELSESAY</span><br><span class="line">你的等级不小于10级！</span><br></pre></td></tr></table></figure>
-
-<p><strong>例：<BR> 对话框换行</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">level &lt; 10</span><br><span class="line">#SAY</span><br><span class="line">你的等级小于10级！&lt;BR&gt;先去升升级吧！</span><br><span class="line">#ELSESAY</span><br><span class="line">你的等级不小于10级！</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><strong>例：执行功能</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#IF</span><br><span class="line">level &lt; 10</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你当前等级小于10级&quot; FALSE</span><br><span class="line">#ELSEACT</span><br><span class="line">TopMessage &quot;你当前等级不小于10级&quot; FALSE</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><strong>例：对话框按钮执行脚本</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">你好，有什么可以帮你？&lt;#SO:1&gt;我要金币&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveGold 100</span><br><span class="line">TopMessage &quot;你获得100金币&quot; FALSE</span><br></pre></td></tr></table></figure>
-
-<p><code>&lt;#SO:1&gt;按钮名字&lt;#SO/&gt;</code> - <code>&lt;#SO:1&gt;</code>数字1代表按钮的触发标签，以<code>&lt;#SO/&gt;</code>结尾</p>
-<hr>
-<p><strong>例：多级跳转界面</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[@MAIN]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">你好，有什么可以帮你？&lt;#SO:1&gt;我要金币&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">请问我为什么要给你金币？&lt;#SO:1&gt;因为我长得帅&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1_1]</span><br><span class="line">#IF</span><br><span class="line">#SAY</span><br><span class="line">长得帅就可以为所欲为？&lt;#SO:1&gt;求求你给我点吧&lt;#SO/&gt;&lt;#SO:2&gt;不给就算了&lt;#SO/&gt;</span><br><span class="line"></span><br><span class="line">[@1_1_1]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">GiveGold 100</span><br><span class="line">TopMessage &quot;好吧，我给你100金币吧&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">[@1_1_2]</span><br><span class="line">#IF</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;没爱了，不强求了&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
-
-<p>如果使用按钮跳转到下一个界面时，触发处就得每一级多加_加当前数字</p>
-<hr>
-<p><strong>例：多条件判断中断</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#IF</span><br><span class="line">level &gt; 10</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你当前等级大于10级&quot; FALSE</span><br><span class="line">BREAK</span><br><span class="line"></span><br><span class="line">#IF</span><br><span class="line">level &gt; 15</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你当前等级大于15级&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
-
-<p>这样第一个条件满足后就不执行后面的判断了</p>
-<hr>
-<p><strong>例：NOT取反判断</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#IF</span><br><span class="line">NOT level = 15</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你的等级不等于15级&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><strong>例：OR多条件判断</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#OR</span><br><span class="line">level &gt; 10</span><br><span class="line">CheckClass 战士</span><br><span class="line">#ACT</span><br><span class="line">TopMessage &quot;你的等级大于10级或你职业是战士&quot; FALSE</span><br><span class="line">BREAK</span><br></pre></td></tr></table></figure>
-
-<p>这样上面两个条件满足其中一个就会执行后面的语句</p>
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.vjoker.blog/2025/01/06/iconiq-ai-report-2025-review/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="V.Joker">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="V's Joker">
-      <meta itemprop="description" content="在混沌中寻找真相，在黑暗里绽放微笑">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | V's Joker">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/06/iconiq-ai-report-2025-review/" class="post-title-link" itemprop="url">《ICONIQ 2025年人工智能现状报告：构建者的剧本》：为AI时代的擘画者献上的深度启示</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-01-06 14:30:00" itemprop="dateCreated datePublished" datetime="2025-01-06T14:30:00+08:00">2025-01-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-03 01:34:12" itemprop="dateModified" datetime="2025-08-03T01:34:12+08:00">2025-08-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/AI%E6%B4%9E%E5%AF%9F/" itemprop="url" rel="index"><span itemprop="name">AI洞察</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/AI%E6%B4%9E%E5%AF%9F/%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index"><span itemprop="name">行业报告</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="《ICONIQ-2025年人工智能现状报告：构建者的剧本》：为AI时代的擘画者献上的深度启示"><a href="#《ICONIQ-2025年人工智能现状报告：构建者的剧本》：为AI时代的擘画者献上的深度启示" class="headerlink" title="《ICONIQ 2025年人工智能现状报告：构建者的剧本》：为AI时代的擘画者献上的深度启示"></a>《ICONIQ 2025年人工智能现状报告：构建者的剧本》：为AI时代的擘画者献上的深度启示</h1><blockquote>
-<p>“AI发展的新纪元已经到来，从前瞻理念到坚实价值的伟大跨越正在发生。”</p>
-</blockquote>
-<p>ICONIQ于2025年6月发布的《2025年人工智能现状报告：构建者的剧本》，犹如在波澜壮阔的人工智能领域投下的一枚深水炸弹，激起了业界层层涟漪。这份凝聚了对300名软件公司高管的严谨调查以及与众多AI领域思想领袖深度对话精华的报告，其价值远不止于精准描绘AI技术发展的当前图景。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/01/06/iconiq-ai-report-2025-review/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
